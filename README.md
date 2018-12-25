@@ -6,7 +6,7 @@ description: Vue.js
 
 ## 特点：
 
-![](.gitbook/assets/image.png)
+![](.gitbook/assets/image%20%288%29.png)
 
 ## 介绍：
 

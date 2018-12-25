@@ -293,7 +293,7 @@ Vue.component('my-component', {
 
  当 prop 验证失败的时候，\(开发环境构建版本的\) Vue 将会产生一个控制台的警告
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 
 #### [类型检查](https://vuejs.bootcss.com/v2/guide/components-props.html#%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5) <a id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;"></a>
 
@@ -360,4 +360,98 @@ Vue.component('base-checkbox', {
 ```
 
 这里的 `lovingVue` 的值将会传入这个名为 `checked` 的 prop。同时当 `<base-checkbox>` 触发一个 `change` 事件并附带一个新的值的时候，这个 `lovingVue` 的属性将会被更新。
+
+### [`.sync` 修饰符](https://vuejs.bootcss.com/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6) <a id="sync-&#x4FEE;&#x9970;&#x7B26;"></a>
+
+> 2.3.0+ 新增
+
+在有些情况下，我们可能需要对一个 prop 进行“双向绑定”。不幸的是，真正的双向绑定会带来维护上的问题，因为子组件可以修改父组件，且在父组件和子组件都没有明显的改动来源。
+
+这也是为什么我们推荐以 `update:myPropName` 的模式触发事件取而代之。举个例子，在一个包含 `title` prop 的假设的组件中，我们可以用以下方法表达对其赋新值的意图：
+
+```javascript
+this.$emit('update:title', newTitle)
+```
+
+然后父组件可以监听那个事件并根据需要更新一个本地的数据属性。例如：
+
+```markup
+<text-document
+  v-bind:title="doc.title"
+  v-on:update:title="doc.title = $event"
+></text-document>
+```
+
+为了方便起见，我们为这种模式提供一个缩写，即 `.sync` 修饰符：
+
+```markup
+<text-document v-bind:title.sync="doc.title"></text-document>
+```
+
+![](../.gitbook/assets/image%20%281%29.png)
+
+ 当我们用一个对象同时设置多个 prop 的时候，也可以将这个 `.sync` 修饰符和 `v-bind` 配合使用：
+
+```markup
+<text-document v-bind.sync="doc"></text-document>
+```
+
+ 这样会把 `doc` 对象中的每一个属性 \(如 `title`\) 都作为一个独立的 prop 传进去，然后各自添加用于更新的 `v-on` 监听器。
+
+![](../.gitbook/assets/image%20%284%29.png)
+
+## 插槽
+
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+
+## 动态组件和异步组件
+
+\#\#\#\#\#\#\#\#\#\#\#\#
+
+## 处理边界情况
+
+### [访问元素 & 组件](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%85%83%E7%B4%A0-amp-%E7%BB%84%E4%BB%B6) <a id="&#x8BBF;&#x95EE;&#x5143;&#x7D20;-amp-&#x7EC4;&#x4EF6;"></a>
+
+在绝大多数情况下，我们最好不要触达另一个组件实例内部或手动操作 DOM 元素。不过也确实在一些情况下做这些事情是合适的。
+
+
+
+#### [访问根实例](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E6%A0%B9%E5%AE%9E%E4%BE%8B) <a id="&#x8BBF;&#x95EE;&#x6839;&#x5B9E;&#x4F8B;"></a>
+
+在每个 `new Vue` 实例的子组件中，其根实例可以通过 `$root` 属性进行访问。例如，在这个根实例中：
+
+```javascript
+// Vue 根实例
+new Vue({
+  data: {
+    foo: 1
+  },
+  computed: {
+    bar: function () { /* ... */ }
+  },
+  methods: {
+    baz: function () { /* ... */ }
+  }
+})
+```
+
+所有的子组件都可以将这个实例作为一个全局 store 来访问或使用。
+
+```javascript
+// 获取根组件的数据
+this.$root.foo
+
+// 写入根组件的数据
+this.$root.foo = 2
+
+// 访问根组件的计算属性
+this.$root.bar
+
+// 调用根组件的方法
+this.$root.baz()
+```
+
+![](../.gitbook/assets/image%20%286%29.png)
+
+
 
