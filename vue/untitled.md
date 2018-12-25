@@ -152,7 +152,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 
  这个 `.passive` 修饰符尤其能够提升移动端的性能。
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 ### [按键修饰符](https://vuejs.bootcss.com/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6) <a id="&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"></a>
 
@@ -200,7 +200,7 @@ Vue.config.keyCodes.f1 = 112
 
 ![](../.gitbook/assets/image%20%284%29.png)
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image%20%2817%29.png)
 
 
 
