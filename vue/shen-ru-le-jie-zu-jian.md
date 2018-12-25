@@ -293,7 +293,7 @@ Vue.component('my-component', {
 
  当 prop 验证失败的时候，\(开发环境构建版本的\) Vue 将会产生一个控制台的警告
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%286%29.png)
 
 #### [类型检查](https://vuejs.bootcss.com/v2/guide/components-props.html#%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5) <a id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;"></a>
 
@@ -398,7 +398,7 @@ this.$emit('update:title', newTitle)
 
  这样会把 `doc` 对象中的每一个属性 \(如 `title`\) 都作为一个独立的 prop 传进去，然后各自添加用于更新的 `v-on` 监听器。
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 
 ## 插槽
 
@@ -449,9 +449,54 @@ this.$root.bar
 
 // 调用根组件的方法
 this.$root.baz()
+
 ```
 
-![](../.gitbook/assets/image%20%286%29.png)
+#### [访问父级组件实例](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B) <a id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"></a>
+
+![](../.gitbook/assets/image%20%2812%29.png)
+
+![](../.gitbook/assets/image%20%282%29.png)
+
+[访问子组件实例或子元素](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%AD%90%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E6%88%96%E5%AD%90%E5%85%83%E7%B4%A0)
+
+尽管存在 prop 和事件，有的时候你仍可能需要在 JavaScript 里直接访问一个子组件。为了达到这个目的，你可以通过 `ref` 特性为这个子组件赋予一个 ID 引用。例如：
+
+```javascript
+<base-input ref="usernameInput"></base-input>
+```
+
+现在在你已经定义了这个 `ref` 的组件里，你可以使用：
+
+```javascript
+this.$refs.usernameInput
+```
+
+来访问这个 `<base-input>` 实例，以便不时之需。比如程序化地从一个父级组件聚焦这个输入框。在刚才那个例子中，该 `<base-input>` 组件也可以使用一个类似的 `ref` 提供对内部这个指定元素的访问，例如：
+
+```javascript
+<input ref="input">
+```
+
+甚至可以通过其父级组件定义方法：
+
+```javascript
+methods: {
+  // 用来从父级组件聚焦输入框
+  focus: function () {
+    this.$refs.input.focus()
+  }
+}
+```
+
+这样就允许父级组件通过下面的代码聚焦 `<base-input>` 里的输入框：
+
+```javascript
+this.$refs.usernameInput.focus()
+```
+
+当 `ref` 和 `v-for` 一起使用的时候，你得到的引用将会是一个包含了对应数据源的这些子组件的数组。  
 
 
+![](../.gitbook/assets/image%20%288%29.png)
 
