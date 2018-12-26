@@ -1,0 +1,668 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>深入了解组件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="深入了解组件">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html" />
+    
+    
+    <link rel="prev" href="untitled.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Vue</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="sheng-ming-zhou-qi.html">
+            
+                <a href="sheng-ming-zhou-qi.html">
+            
+                    
+                    生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="untitled.html">
+            
+                <a href="untitled.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="shen-ru-le-jie-zu-jian.html">
+            
+                <a href="shen-ru-le-jie-zu-jian.html">
+            
+                    
+                    深入了解组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html">
+            
+                <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html">
+            
+                    
+                    深入响应式原理{双向绑定}
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="vue-3.0-zhan-wang.html">
+            
+                <a href="vue-3.0-zhan-wang.html">
+            
+                    
+                    VUE 3.0 展望~
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >深入了解组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6DF1;&#x5165;&#x4E86;&#x89E3;&#x7EC4;&#x4EF6;">&#x6DF1;&#x5165;&#x4E86;&#x89E3;&#x7EC4;&#x4EF6;</h1>
+<h3 id="&#x7EC4;&#x4EF6;&#x540D;-"><a href="https://vuejs.bootcss.com/v2/guide/components-registration.html#%E7%BB%84%E4%BB%B6%E5%90%8D" target="_blank">&#x7EC4;&#x4EF6;&#x540D;</a> <a id="&#x7EC4;&#x4EF6;&#x540D;"></a></h3>
+<h4 id="&#x7EC4;&#x4EF6;&#x540D;&#x5927;&#x5C0F;&#x5199;-"><a href="https://vuejs.bootcss.com/v2/guide/components-registration.html#%E7%BB%84%E4%BB%B6%E5%90%8D%E5%A4%A7%E5%B0%8F%E5%86%99" target="_blank">&#x7EC4;&#x4EF6;&#x540D;&#x5927;&#x5C0F;&#x5199;</a> <a id="&#x7EC4;&#x4EF6;&#x540D;&#x5927;&#x5C0F;&#x5199;"></a></h4>
+<p>&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x540D;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x4E24;&#x79CD;&#xFF1A;</p>
+<p><strong>&#x4F7F;&#x7528; kebab-case</strong></p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;my-component-name&apos;</span>, { <span class="hljs-comment">/* ... */</span> })
+</code></pre>
+<p>&#x5F53;&#x4F7F;&#x7528; kebab-case (&#x77ED;&#x6A2A;&#x7EBF;&#x5206;&#x9694;&#x547D;&#x540D;) &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x4F60;&#x4E5F;&#x5FC5;&#x987B;&#x5728;&#x5F15;&#x7528;&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x65F6;&#x4F7F;&#x7528; kebab-case&#xFF0C;&#x4F8B;&#x5982; <code>&lt;my-component-name&gt;</code>&#x3002;</p>
+<p><strong>&#x4F7F;&#x7528; PascalCase</strong></p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;MyComponentName&apos;</span>, { <span class="hljs-comment">/* ... */</span> })
+</code></pre>
+<p>&#x5F53;&#x4F7F;&#x7528; PascalCase (&#x9A7C;&#x5CF0;&#x5F0F;&#x547D;&#x540D;) &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x4F60;&#x5728;&#x5F15;&#x7528;&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x65F6;&#x4E24;&#x79CD;&#x547D;&#x540D;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4; <code>&lt;my-component-name&gt;</code> &#x548C; <code>&lt;MyComponentName&gt;</code> &#x90FD;&#x662F;&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x76F4;&#x63A5;&#x5728; DOM (&#x5373;&#x975E;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6A21;&#x677F;) &#x4E2D;&#x4F7F;&#x7528;&#x65F6;&#x53EA;&#x6709; kebab-case &#x662F;&#x6709;&#x6548;&#x7684;&#x3002;</p>
+<h3 id="&#x5168;&#x5C40;&#x6CE8;&#x518C;-"><a href="https://vuejs.bootcss.com/v2/guide/components-registration.html#%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C" target="_blank">&#x5168;&#x5C40;&#x6CE8;&#x518C;</a> <a id="&#x5168;&#x5C40;&#x6CE8;&#x518C;"></a></h3>
+<p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x7528;&#x8FC7; <code>Vue.component</code> &#x6765;&#x521B;&#x5EFA;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;my-component-name&apos;</span>, {
+  <span class="hljs-comment">// ... &#x9009;&#x9879; ...</span>
+})
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x662F;<strong>&#x5168;&#x5C40;&#x6CE8;&#x518C;&#x7684;</strong>&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5B83;&#x4EEC;&#x5728;&#x6CE8;&#x518C;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x4EFB;&#x4F55;&#x65B0;&#x521B;&#x5EFA;&#x7684; Vue &#x6839;&#x5B9E;&#x4F8B; (<code>new Vue</code>) &#x7684;&#x6A21;&#x677F;&#x4E2D;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;component-a&apos;</span>, { <span class="hljs-comment">/* ... */</span> })
+Vue.component(<span class="hljs-string">&apos;component-b&apos;</span>, { <span class="hljs-comment">/* ... */</span> })
+Vue.component(<span class="hljs-string">&apos;component-c&apos;</span>, { <span class="hljs-comment">/* ... */</span> })
+
+<span class="hljs-keyword">new</span> Vue({ el: <span class="hljs-string">&apos;#app&apos;</span> })
+</code></pre>
+<pre><code class="lang-javascript">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+  &lt;component-a&gt;&lt;/component-a&gt;
+  &lt;component-b&gt;&lt;/component-b&gt;
+  &lt;component-c&gt;&lt;/component-c&gt;
+&lt;/div&gt;
+</code></pre>
+<p>&#x5728;&#x6240;&#x6709;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8FD9;&#x4E09;&#x4E2A;&#x7EC4;&#x4EF6;<em>&#x5728;&#x5404;&#x81EA;&#x5185;&#x90E8;</em>&#x4E5F;&#x90FD;&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x5C40;&#x90E8;&#x6CE8;&#x518C;-"><a href="https://vuejs.bootcss.com/v2/guide/components-registration.html#%E5%B1%80%E9%83%A8%E6%B3%A8%E5%86%8C" target="_blank">&#x5C40;&#x90E8;&#x6CE8;&#x518C;</a> <a id="&#x5C40;&#x90E8;&#x6CE8;&#x518C;"></a></h3>
+<p>&#x5168;&#x5C40;&#x6CE8;&#x518C;&#x5F80;&#x5F80;&#x662F;&#x4E0D;&#x591F;&#x7406;&#x60F3;&#x7684;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x50CF; webpack &#x8FD9;&#x6837;&#x7684;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;&#xFF0C;&#x5168;&#x5C40;&#x6CE8;&#x518C;&#x6240;&#x6709;&#x7684;&#x7EC4;&#x4EF6;&#x610F;&#x5473;&#x7740;&#x5373;&#x4FBF;&#x4F60;&#x5DF2;&#x7ECF;&#x4E0D;&#x518D;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E86;&#xFF0C;&#x5B83;&#x4ECD;&#x7136;&#x4F1A;&#x88AB;&#x5305;&#x542B;&#x5728;&#x4F60;&#x6700;&#x7EC8;&#x7684;&#x6784;&#x5EFA;&#x7ED3;&#x679C;&#x4E2D;&#x3002;&#x8FD9;&#x9020;&#x6210;&#x4E86;&#x7528;&#x6237;&#x4E0B;&#x8F7D;&#x7684; JavaScript &#x7684;&#x65E0;&#x8C13;&#x7684;&#x589E;&#x52A0;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684; JavaScript &#x5BF9;&#x8C61;&#x6765;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ComponentA = { <span class="hljs-comment">/* ... */</span> }
+<span class="hljs-keyword">var</span> ComponentB = { <span class="hljs-comment">/* ... */</span> }
+<span class="hljs-keyword">var</span> ComponentC = { <span class="hljs-comment">/* ... */</span> }
+</code></pre>
+<p> &#x7136;&#x540E;&#x5728; <code>components</code> &#x9009;&#x9879;&#x4E2D;&#x5B9A;&#x4E49;&#x4F60;&#x60F3;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&apos;#app&apos;</span>,
+  components: {
+    <span class="hljs-string">&apos;component-a&apos;</span>: ComponentA,
+    <span class="hljs-string">&apos;component-b&apos;</span>: ComponentB
+  }
+})
+</code></pre>
+<p>&#x5BF9;&#x4E8E; <code>components</code> &#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x6765;&#x8BF4;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x540D;&#x5C31;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x6CE8;&#x610F;<strong>&#x5C40;&#x90E8;&#x6CE8;&#x518C;&#x7684;&#x7EC4;&#x4EF6;&#x5728;&#x5176;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;</strong><em><strong>&#x4E0D;&#x53EF;&#x7528;</strong></em>&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B; <code>ComponentA</code> &#x5728; <code>ComponentB</code> &#x4E2D;&#x53EF;&#x7528;&#xFF0C;&#x5219;&#x4F60;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ComponentA = { <span class="hljs-comment">/* ... */</span> }
+
+<span class="hljs-keyword">var</span> ComponentB = {
+  components: {
+    <span class="hljs-string">&apos;component-a&apos;</span>: ComponentA
+  },
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<h4 id="&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x5168;&#x5C40;&#x6CE8;&#x518C;-"><a href="https://vuejs.bootcss.com/v2/guide/components-registration.html#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C" target="_blank">&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x5168;&#x5C40;&#x6CE8;&#x518C;</a> <a id="&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x5168;&#x5C40;&#x6CE8;&#x518C;"></a></h4>
+<p>&#x53EF;&#x80FD;&#x4F60;&#x7684;&#x8BB8;&#x591A;&#x7EC4;&#x4EF6;&#x53EA;&#x662F;&#x5305;&#x88F9;&#x4E86;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x6846;&#x6216;&#x6309;&#x94AE;&#x4E4B;&#x7C7B;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x662F;&#x76F8;&#x5BF9;&#x901A;&#x7528;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x628A;&#x5B83;&#x4EEC;&#x79F0;&#x4E3A;<a href="https://vuejs.bootcss.com/v2/style-guide/#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E5%90%8D-%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90" target="_blank">&#x57FA;&#x7840;&#x7EC4;&#x4EF6;</a>&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x5728;&#x5404;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#x88AB;&#x9891;&#x7E41;&#x7684;&#x7528;&#x5230;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4F1A;&#x5BFC;&#x81F4;&#x5F88;&#x591A;&#x7EC4;&#x4EF6;&#x91CC;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x7684;&#x957F;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> BaseButton <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./BaseButton.vue&apos;</span>
+<span class="hljs-keyword">import</span> BaseIcon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./BaseIcon.vue&apos;</span>
+<span class="hljs-keyword">import</span> BaseInput <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./BaseInput.vue&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  components: {
+    BaseButton,
+    BaseIcon,
+    BaseInput
+  }
+}
+</code></pre>
+<p>&#x800C;&#x53EA;&#x662F;&#x7528;&#x4E8E;&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;BaseInput
+  v-model=<span class="hljs-string">&quot;searchText&quot;</span>
+  @keydown.enter=<span class="hljs-string">&quot;search&quot;</span>
+/&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">BaseButton</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;search&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">BaseIcon</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;search&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">BaseButton</span>&gt;</span>
+</span></code></pre>
+<p>&#x5E78;&#x597D;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86; webpack (&#x6216;&#x5728;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x4E86; webpack &#x7684; <a href="https://github.com/vuejs/vue-cli" target="_blank">Vue CLI 3+</a>)&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>require.context</code> &#x53EA;&#x5168;&#x5C40;&#x6CE8;&#x518C;&#x8FD9;&#x4E9B;&#x975E;&#x5E38;&#x901A;&#x7528;&#x7684;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4EFD;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x5E94;&#x7528;&#x5165;&#x53E3;&#x6587;&#x4EF6; (&#x6BD4;&#x5982; <code>src/main.js</code>) &#x4E2D;&#x5168;&#x5C40;&#x5BFC;&#x5165;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> upperFirst <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lodash/upperFirst&apos;</span>
+<span class="hljs-keyword">import</span> camelCase <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lodash/camelCase&apos;</span>
+
+<span class="hljs-keyword">const</span> requireComponent = <span class="hljs-built_in">require</span>.context(
+  <span class="hljs-comment">// &#x5176;&#x7EC4;&#x4EF6;&#x76EE;&#x5F55;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;</span>
+  <span class="hljs-string">&apos;./components&apos;</span>,
+  <span class="hljs-comment">// &#x662F;&#x5426;&#x67E5;&#x8BE2;&#x5176;&#x5B50;&#x76EE;&#x5F55;</span>
+  <span class="hljs-literal">false</span>,
+  <span class="hljs-comment">// &#x5339;&#x914D;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</span>
+  /Base[A-Z]\w+\.(vue|js)$/
+)
+
+requireComponent.keys().forEach(fileName =&gt; {
+  <span class="hljs-comment">// &#x83B7;&#x53D6;&#x7EC4;&#x4EF6;&#x914D;&#x7F6E;</span>
+  <span class="hljs-keyword">const</span> componentConfig = requireComponent(fileName)
+
+  <span class="hljs-comment">// &#x83B7;&#x53D6;&#x7EC4;&#x4EF6;&#x7684; PascalCase &#x547D;&#x540D;</span>
+  <span class="hljs-keyword">const</span> componentName = upperFirst(
+    camelCase(
+      <span class="hljs-comment">// &#x5265;&#x53BB;&#x6587;&#x4EF6;&#x540D;&#x5F00;&#x5934;&#x7684; `./` &#x548C;&#x7ED3;&#x5C3E;&#x7684;&#x6269;&#x5C55;&#x540D;</span>
+      fileName.replace(<span class="hljs-regexp">/^\.\/(.*)\.\w+$/</span>, <span class="hljs-string">&apos;$1&apos;</span>)
+    )
+  )
+
+  <span class="hljs-comment">// &#x5168;&#x5C40;&#x6CE8;&#x518C;&#x7EC4;&#x4EF6;</span>
+  Vue.component(
+    componentName,
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#x662F;&#x901A;&#x8FC7; `export default` &#x5BFC;&#x51FA;&#x7684;&#xFF0C;</span>
+    <span class="hljs-comment">// &#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x4F18;&#x5148;&#x4F7F;&#x7528; `.default`&#xFF0C;</span>
+    <span class="hljs-comment">// &#x5426;&#x5219;&#x56DE;&#x9000;&#x5230;&#x4F7F;&#x7528;&#x6A21;&#x5757;&#x7684;&#x6839;&#x3002;</span>
+    componentConfig.default || componentConfig
+  )
+})
+</code></pre>
+<p>&#x8BB0;&#x4F4F;<strong>&#x5168;&#x5C40;&#x6CE8;&#x518C;&#x7684;&#x884C;&#x4E3A;&#x5FC5;&#x987B;&#x5728;&#x6839; Vue &#x5B9E;&#x4F8B; (&#x901A;&#x8FC7; <code>new Vue</code>) &#x521B;&#x5EFA;&#x4E4B;&#x524D;&#x53D1;&#x751F;</strong>&#x3002;<a href="https://github.com/chrisvfritz/vue-enterprise-boilerplate/blob/master/src/components/_globals.js" target="_blank">&#x8FD9;&#x91CC;</a>&#x6709;&#x4E00;&#x4E2A;&#x771F;&#x5B9E;&#x9879;&#x76EE;&#x60C5;&#x666F;&#x4E0B;&#x7684;&#x793A;&#x4F8B;&#x3002;</p>
+<h2 id="props">Props</h2>
+<h3 id="prop-&#x7684;&#x5927;&#x5C0F;&#x5199;-camelcase-vs-kebab-case-"><a href="https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99-camelCase-vs-kebab-case" target="_blank">Prop &#x7684;&#x5927;&#x5C0F;&#x5199; (camelCase vs kebab-case)</a> <a id="Prop-&#x7684;&#x5927;&#x5C0F;&#x5199;-camelCase-vs-kebab-case"></a></h3>
+<p>HTML &#x4E2D;&#x7684;&#x7279;&#x6027;&#x540D;&#x662F;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x628A;&#x6240;&#x6709;&#x5927;&#x5199;&#x5B57;&#x7B26;&#x89E3;&#x91CA;&#x4E3A;&#x5C0F;&#x5199;&#x5B57;&#x7B26;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5F53;&#x4F60;&#x4F7F;&#x7528; DOM &#x4E2D;&#x7684;&#x6A21;&#x677F;&#x65F6;&#xFF0C;camelCase (&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x6CD5;) &#x7684; prop &#x540D;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5176;&#x7B49;&#x4EF7;&#x7684; kebab-case (&#x77ED;&#x6A2A;&#x7EBF;&#x5206;&#x9694;&#x547D;&#x540D;) &#x547D;&#x540D;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;blog-post&apos;</span>, {
+  <span class="hljs-comment">// &#x5728; JavaScript &#x4E2D;&#x662F; camelCase &#x7684;</span>
+  props: [<span class="hljs-string">&apos;postTitle&apos;</span>],
+  template: <span class="hljs-string">&apos;&lt;h3&gt;{{ postTitle }}&lt;/h3&gt;&apos;</span>
+})
+</code></pre>
+<pre><code class="lang-javascript">&lt;!-- &#x5728; HTML &#x4E2D;&#x662F; kebab-<span class="hljs-keyword">case</span> &#x7684; --&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">blog-post</span> <span class="hljs-attr">post-title</span>=<span class="hljs-string">&quot;hello!&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">blog-post</span>&gt;</span>
+</span></code></pre>
+<h3 id="prop-&#x7C7B;&#x578B;-"><a href="https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-%E7%B1%BB%E5%9E%8B" target="_blank">Prop &#x7C7B;&#x578B;</a> <a id="Prop-&#x7C7B;&#x578B;"></a></h3>
+<p>&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x770B;&#x5230;&#x4E86;&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x5F62;&#x5F0F;&#x5217;&#x51FA;&#x7684; prop&#xFF1A;</p>
+<pre><code class="lang-javascript">props: [<span class="hljs-string">&apos;title&apos;</span>, <span class="hljs-string">&apos;likes&apos;</span>, <span class="hljs-string">&apos;isPublished&apos;</span>, <span class="hljs-string">&apos;commentIds&apos;</span>, <span class="hljs-string">&apos;author&apos;</span>]
+</code></pre>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x901A;&#x5E38;&#x4F60;&#x5E0C;&#x671B;&#x6BCF;&#x4E2A; prop &#x90FD;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x503C;&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4EE5;&#x5BF9;&#x8C61;&#x5F62;&#x5F0F;&#x5217;&#x51FA; prop&#xFF0C;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#x548C;&#x503C;&#x5206;&#x522B;&#x662F; prop &#x5404;&#x81EA;&#x7684;&#x540D;&#x79F0;&#x548C;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code class="lang-javascript">props: {
+  title: <span class="hljs-built_in">String</span>,
+  likes: <span class="hljs-built_in">Number</span>,
+  isPublished: <span class="hljs-built_in">Boolean</span>,
+  commentIds: <span class="hljs-built_in">Array</span>,
+  author: <span class="hljs-built_in">Object</span>
+}
+</code></pre>
+<p>&#x8FD9;&#x4E0D;&#x4EC5;&#x4E3A;&#x4F60;&#x7684;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86;&#x6587;&#x6863;&#xFF0C;&#x8FD8;&#x4F1A;&#x5728;&#x5B83;&#x4EEC;&#x9047;&#x5230;&#x9519;&#x8BEF;&#x7684;&#x7C7B;&#x578B;&#x65F6;&#x4ECE;&#x6D4F;&#x89C8;&#x5668;&#x7684; JavaScript &#x63A7;&#x5236;&#x53F0;&#x63D0;&#x793A;&#x7528;&#x6237;&#x3002;&#x4F60;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x90E8;&#x5206;&#x770B;&#x5230;<a href="https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-%E9%AA%8C%E8%AF%81" target="_blank">&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x548C;&#x5176;&#x5B83; prop &#x9A8C;&#x8BC1;</a>&#x3002;</p>
+<h3 id="&#x4F20;&#x9012;&#x9759;&#x6001;&#x6216;&#x52A8;&#x6001;-prop-"><a href="https://vuejs.bootcss.com/v2/guide/components-props.html#%E4%BC%A0%E9%80%92%E9%9D%99%E6%80%81%E6%88%96%E5%8A%A8%E6%80%81-Prop" target="_blank">&#x4F20;&#x9012;&#x9759;&#x6001;&#x6216;&#x52A8;&#x6001; Prop</a> <a id="&#x4F20;&#x9012;&#x9759;&#x6001;&#x6216;&#x52A8;&#x6001;-Prop"></a></h3>
+<p>&#x50CF;&#x8FD9;&#x6837;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86;&#x53EF;&#x4EE5;&#x50CF;&#x8FD9;&#x6837;&#x7ED9; prop &#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;blog-post title=<span class="hljs-string">&quot;My journey with Vue&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">blog-post</span>&gt;</span>
+</span></code></pre>
+<p>&#x4F60;&#x4E5F;&#x77E5;&#x9053; prop &#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>v-bind</code> &#x52A8;&#x6001;&#x8D4B;&#x503C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;!-- &#x52A8;&#x6001;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C; --&gt;
+&lt;blog-post v-bind:title=&quot;post.title&quot;&gt;&lt;/blog-post&gt;
+
+&lt;!-- &#x52A8;&#x6001;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C; --&gt;
+&lt;blog-post v-bind:title=&quot;post.title + &apos; by &apos; + post.author.name&quot;&gt;&lt;/blog-post&gt;
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F20;&#x5165;&#x7684;&#x503C;&#x90FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;<em>&#x4EFB;&#x4F55;</em>&#x7C7B;&#x578B;&#x7684;&#x503C;&#x90FD;&#x53EF;&#x4EE5;&#x4F20;&#x7ED9;&#x4E00;&#x4E2A; prop&#x3002;</p>
+<h4 id="&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;-"><a href="https://vuejs.bootcss.com/v2/guide/components-props.html#%E4%BC%A0%E5%85%A5%E4%B8%80%E4%B8%AA%E5%B8%83%E5%B0%94%E5%80%BC" target="_blank">&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;</a> <a id="&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;"></a></h4>
+<pre><code class="lang-javascript">&lt;!-- &#x5305;&#x542B;&#x8BE5; prop &#x6CA1;&#x6709;&#x503C;&#x7684;&#x60C5;&#x51B5;&#x5728;&#x5185;&#xFF0C;&#x90FD;&#x610F;&#x5473;&#x7740; <span class="hljs-string">`true`</span>&#x3002;--&gt;
+&lt;blog-post is-published&gt;&lt;/blog-post&gt;
+
+&lt;!-- &#x5373;&#x4FBF; `false` &#x662F;&#x9759;&#x6001;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x9700;&#x8981; `v-bind` &#x6765;&#x544A;&#x8BC9; Vue --&gt;
+&lt;!-- &#x8FD9;&#x662F;&#x4E00;&#x4E2A; JavaScript &#x8868;&#x8FBE;&#x5F0F;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;--&gt;
+&lt;blog-post v-bind:is-published=&quot;false&quot;&gt;&lt;/blog-post&gt;
+
+&lt;!-- &#x7528;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x52A8;&#x6001;&#x8D4B;&#x503C;&#x3002;--&gt;
+&lt;blog-post v-bind:is-published=&quot;post.isPublished&quot;&gt;&lt;/blog-post&gt;
+</code></pre>
+<h3 id="&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;-"><a href="https://vuejs.bootcss.com/v2/guide/components-props.html#%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81" target="_blank">&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;</a> <a id="&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;"></a></h3>
+<p>&#x6240;&#x6709;&#x7684; prop &#x90FD;&#x4F7F;&#x5F97;&#x5176;&#x7236;&#x5B50; prop &#x4E4B;&#x95F4;&#x5F62;&#x6210;&#x4E86;&#x4E00;&#x4E2A;<strong>&#x5355;&#x5411;&#x4E0B;&#x884C;&#x7ED1;&#x5B9A;</strong>&#xFF1A;&#x7236;&#x7EA7; prop &#x7684;&#x66F4;&#x65B0;&#x4F1A;&#x5411;&#x4E0B;&#x6D41;&#x52A8;&#x5230;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x53CD;&#x8FC7;&#x6765;&#x5219;&#x4E0D;&#x884C;</p>
+<h3 id="prop-&#x9A8C;&#x8BC1;-"><a href="https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-%E9%AA%8C%E8%AF%81" target="_blank">Prop &#x9A8C;&#x8BC1;</a> <a id="Prop-&#x9A8C;&#x8BC1;"></a></h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E3A;&#x7EC4;&#x4EF6;&#x7684; prop &#x6307;&#x5B9A;&#x9A8C;&#x8BC1;&#x8981;&#x6C42;&#xFF0C;&#x4F8B;&#x5982;&#x4F60;&#x77E5;&#x9053;&#x7684;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x3002;&#x5982;&#x679C;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x6C42;&#x6CA1;&#x6709;&#x88AB;&#x6EE1;&#x8DB3;&#xFF0C;&#x5219; Vue &#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x8B66;&#x544A;&#x4F60;&#x3002;&#x8FD9;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x4F1A;&#x88AB;&#x522B;&#x4EBA;&#x7528;&#x5230;&#x7684;&#x7EC4;&#x4EF6;&#x65F6;&#x5C24;&#x5176;&#x6709;&#x5E2E;&#x52A9;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x5B9A;&#x5236; prop &#x7684;&#x9A8C;&#x8BC1;&#x65B9;&#x5F0F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4E3A; <code>props</code> &#x4E2D;&#x7684;&#x503C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x9A8C;&#x8BC1;&#x9700;&#x6C42;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;my-component&apos;</span>, {
+  props: {
+    <span class="hljs-comment">// &#x57FA;&#x7840;&#x7684;&#x7C7B;&#x578B;&#x68C0;&#x67E5; (`null` &#x5339;&#x914D;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;)</span>
+    propA: <span class="hljs-built_in">Number</span>,
+    <span class="hljs-comment">// &#x591A;&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x7C7B;&#x578B;</span>
+    propB: [<span class="hljs-built_in">String</span>, <span class="hljs-built_in">Number</span>],
+    <span class="hljs-comment">// &#x5FC5;&#x586B;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+    propC: {
+      type: <span class="hljs-built_in">String</span>,
+      required: <span class="hljs-literal">true</span>
+    },
+    <span class="hljs-comment">// &#x5E26;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x6570;&#x5B57;</span>
+    propD: {
+      type: <span class="hljs-built_in">Number</span>,
+      <span class="hljs-keyword">default</span>: <span class="hljs-number">100</span>
+    },
+    <span class="hljs-comment">// &#x5E26;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x5BF9;&#x8C61;</span>
+    propE: {
+      type: <span class="hljs-built_in">Object</span>,
+      <span class="hljs-comment">// &#x5BF9;&#x8C61;&#x6216;&#x6570;&#x7EC4;&#x9ED8;&#x8BA4;&#x503C;&#x5FC5;&#x987B;&#x4ECE;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;&#x51FD;&#x6570;&#x83B7;&#x53D6;</span>
+      <span class="hljs-keyword">default</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> { message: <span class="hljs-string">&apos;hello&apos;</span> }
+      }
+    },
+    <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x9A8C;&#x8BC1;&#x51FD;&#x6570;</span>
+    propF: {
+      validator: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+        <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x503C;&#x5FC5;&#x987B;&#x5339;&#x914D;&#x4E0B;&#x5217;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;</span>
+        <span class="hljs-keyword">return</span> [<span class="hljs-string">&apos;success&apos;</span>, <span class="hljs-string">&apos;warning&apos;</span>, <span class="hljs-string">&apos;danger&apos;</span>].indexOf(value) !== <span class="hljs-number">-1</span>
+      }
+    }
+  }
+})
+</code></pre>
+<p> &#x5F53; prop &#x9A8C;&#x8BC1;&#x5931;&#x8D25;&#x7684;&#x65F6;&#x5019;&#xFF0C;(&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x6784;&#x5EFA;&#x7248;&#x672C;&#x7684;) Vue &#x5C06;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x8B66;&#x544A;</p>
+<p><img src="../.gitbook/assets/image%20%288%29.png" alt=""></p>
+<h4 id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;-"><a href="https://vuejs.bootcss.com/v2/guide/components-props.html#%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5" target="_blank">&#x7C7B;&#x578B;&#x68C0;&#x67E5;</a> <a id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;"></a></h4>
+<p><code>type</code> &#x53EF;&#x4EE5;&#x662F;&#x4E0B;&#x5217;&#x539F;&#x751F;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#xFF1A;</p>
+<ul>
+<li><code>String</code></li>
+<li><code>Number</code></li>
+<li><code>Boolean</code></li>
+<li><code>Array</code></li>
+<li><code>Object</code></li>
+<li><code>Date</code></li>
+<li><code>Function</code></li>
+<li><code>Symbol</code></li>
+</ul>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#xFF08;emit&#xFF09;">&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#xFF08;emit&#xFF09;</h2>
+<h3 id="&#x4E8B;&#x4EF6;&#x540D;-"><a href="https://vuejs.bootcss.com/v2/guide/components-custom-events.html#%E4%BA%8B%E4%BB%B6%E5%90%8D" target="_blank">&#x4E8B;&#x4EF6;&#x540D;</a> <a id="&#x4E8B;&#x4EF6;&#x540D;"></a></h3>
+<p>&#x4E0D;&#x540C;&#x4E8E;&#x7EC4;&#x4EF6;&#x548C; prop&#xFF0C;&#x4E8B;&#x4EF6;&#x540D;&#x4E0D;&#x5B58;&#x5728;&#x4EFB;&#x4F55;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x8F6C;&#x6362;&#x3002;&#x800C;&#x662F;&#x89E6;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x540D;&#x9700;&#x8981;&#x5B8C;&#x5168;&#x5339;&#x914D;&#x76D1;&#x542C;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x6240;&#x7528;&#x7684;&#x540D;&#x79F0;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x89E6;&#x53D1;&#x4E00;&#x4E2A; camelCase &#x540D;&#x5B57;&#x7684;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&apos;myEvent&apos;</span>)
+</code></pre>
+<p>&#x5219;&#x76D1;&#x542C;&#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x7684; kebab-case &#x7248;&#x672C;&#x662F;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x6548;&#x679C;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-markup">&lt;my-component v-on:my-event=&quot;doSomething&quot;&gt;&lt;/my-component&gt;
+</code></pre>
+<p>&#x4E0D;&#x540C;&#x4E8E;&#x7EC4;&#x4EF6;&#x548C; prop&#xFF0C;&#x4E8B;&#x4EF6;&#x540D;&#x4E0D;&#x4F1A;&#x88AB;&#x7528;&#x4F5C;&#x4E00;&#x4E2A; JavaScript &#x53D8;&#x91CF;&#x540D;&#x6216;&#x5C5E;&#x6027;&#x540D;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x6CA1;&#x6709;&#x7406;&#x7531;&#x4F7F;&#x7528; camelCase &#x6216; PascalCase &#x4E86;&#x3002;&#x5E76;&#x4E14; <code>v-on</code> &#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#x5728; DOM &#x6A21;&#x677F;&#x4E2D;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A;&#x5168;&#x5C0F;&#x5199; (&#x56E0;&#x4E3A; HTML &#x662F;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;&#x7684;)&#xFF0C;&#x6240;&#x4EE5; <code>v-on:myEvent</code> &#x5C06;&#x4F1A;&#x53D8;&#x6210; <code>v-on:myevent</code>&#x2014;&#x2014;&#x5BFC;&#x81F4; <code>myEvent</code> &#x4E0D;&#x53EF;&#x80FD;&#x88AB;&#x76D1;&#x542C;&#x5230;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4F60;<strong>&#x59CB;&#x7EC8;&#x4F7F;&#x7528; kebab-case &#x7684;&#x4E8B;&#x4EF6;&#x540D;</strong>&#x3002;</p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;-v-model-"><a href="https://vuejs.bootcss.com/v2/guide/components-custom-events.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84-v-model" target="_blank">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; <code>v-model</code></a> <a id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;-v-model"></a></h3>
+<blockquote>
+<p>2.2.0+ &#x65B0;&#x589E;</p>
+</blockquote>
+<p>&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0A;&#x7684; <code>v-model</code> &#x9ED8;&#x8BA4;&#x4F1A;&#x5229;&#x7528;&#x540D;&#x4E3A; <code>value</code> &#x7684; prop &#x548C;&#x540D;&#x4E3A; <code>input</code> &#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x50CF;&#x5355;&#x9009;&#x6846;&#x3001;&#x590D;&#x9009;&#x6846;&#x7B49;&#x7C7B;&#x578B;&#x7684;&#x8F93;&#x5165;&#x63A7;&#x4EF6;&#x53EF;&#x80FD;&#x4F1A;&#x5C06; <code>value</code> &#x7279;&#x6027;&#x7528;&#x4E8E;<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#Value" target="_blank">&#x4E0D;&#x540C;&#x7684;&#x76EE;&#x7684;</a>&#x3002;<code>model</code> &#x9009;&#x9879;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x907F;&#x514D;&#x8FD9;&#x6837;&#x7684;&#x51B2;&#x7A81;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;base-checkbox&apos;</span>, {
+  model: {
+    prop: <span class="hljs-string">&apos;checked&apos;</span>,
+    event: <span class="hljs-string">&apos;change&apos;</span>
+  },
+  props: {
+    checked: <span class="hljs-built_in">Boolean</span>
+  },
+  template: <span class="hljs-string">`
+    &lt;input
+      type=&quot;checkbox&quot;
+      v-bind:checked=&quot;checked&quot;
+      v-on:change=&quot;$emit(&apos;change&apos;, $event.target.checked)&quot;
+    &gt;
+  `</span>
+})
+</code></pre>
+<p>&#x73B0;&#x5728;&#x5728;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0A;&#x4F7F;&#x7528; <code>v-model</code> &#x7684;&#x65F6;&#x5019;&#xFF1A;</p>
+<pre><code class="lang-markup">&lt;base-checkbox v-model=&quot;lovingVue&quot;&gt;&lt;/base-checkbox&gt;
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684; <code>lovingVue</code> &#x7684;&#x503C;&#x5C06;&#x4F1A;&#x4F20;&#x5165;&#x8FD9;&#x4E2A;&#x540D;&#x4E3A; <code>checked</code> &#x7684; prop&#x3002;&#x540C;&#x65F6;&#x5F53; <code>&lt;base-checkbox&gt;</code> &#x89E6;&#x53D1;&#x4E00;&#x4E2A; <code>change</code> &#x4E8B;&#x4EF6;&#x5E76;&#x9644;&#x5E26;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A; <code>lovingVue</code> &#x7684;&#x5C5E;&#x6027;&#x5C06;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;&#x3002;</p>
+<h3 id="sync-&#x4FEE;&#x9970;&#x7B26;-"><a href="https://vuejs.bootcss.com/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6" target="_blank"><code>.sync</code> &#x4FEE;&#x9970;&#x7B26;</a> <a id="sync-&#x4FEE;&#x9970;&#x7B26;"></a></h3>
+<blockquote>
+<p>2.3.0+ &#x65B0;&#x589E;</p>
+</blockquote>
+<p>&#x5728;&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5BF9;&#x4E00;&#x4E2A; prop &#x8FDB;&#x884C;&#x201C;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x201D;&#x3002;&#x4E0D;&#x5E78;&#x7684;&#x662F;&#xFF0C;&#x771F;&#x6B63;&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x4F1A;&#x5E26;&#x6765;&#x7EF4;&#x62A4;&#x4E0A;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x5B50;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7236;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E14;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x548C;&#x5B50;&#x7EC4;&#x4EF6;&#x90FD;&#x6CA1;&#x6709;&#x660E;&#x663E;&#x7684;&#x6539;&#x52A8;&#x6765;&#x6E90;&#x3002;</p>
+<p>&#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4EE5; <code>update:myPropName</code> &#x7684;&#x6A21;&#x5F0F;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5305;&#x542B; <code>title</code> prop &#x7684;&#x5047;&#x8BBE;&#x7684;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x8868;&#x8FBE;&#x5BF9;&#x5176;&#x8D4B;&#x65B0;&#x503C;&#x7684;&#x610F;&#x56FE;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&apos;update:title&apos;</span>, newTitle)
+</code></pre>
+<p>&#x7136;&#x540E;&#x7236;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x90A3;&#x4E2A;&#x4E8B;&#x4EF6;&#x5E76;&#x6839;&#x636E;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x7684;&#x6570;&#x636E;&#x5C5E;&#x6027;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-markup">&lt;text-document
+  v-bind:title=&quot;doc.title&quot;
+  v-on:update:title=&quot;doc.title = $event&quot;
+&gt;&lt;/text-document&gt;
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8D77;&#x89C1;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x7F29;&#x5199;&#xFF0C;&#x5373; <code>.sync</code> &#x4FEE;&#x9970;&#x7B26;&#xFF1A;</p>
+<pre><code class="lang-markup">&lt;text-document v-bind:title.sync=&quot;doc.title&quot;&gt;&lt;/text-document&gt;
+</code></pre>
+<p><img src="../.gitbook/assets/image%20%281%29.png" alt=""></p>
+<p> &#x5F53;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A; prop &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A; <code>.sync</code> &#x4FEE;&#x9970;&#x7B26;&#x548C; <code>v-bind</code> &#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-markup">&lt;text-document v-bind.sync=&quot;doc&quot;&gt;&lt;/text-document&gt;
+</code></pre>
+<p> &#x8FD9;&#x6837;&#x4F1A;&#x628A; <code>doc</code> &#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5C5E;&#x6027; (&#x5982; <code>title</code>) &#x90FD;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684; prop &#x4F20;&#x8FDB;&#x53BB;&#xFF0C;&#x7136;&#x540E;&#x5404;&#x81EA;&#x6DFB;&#x52A0;&#x7528;&#x4E8E;&#x66F4;&#x65B0;&#x7684; <code>v-on</code> &#x76D1;&#x542C;&#x5668;&#x3002;</p>
+<p><img src="../.gitbook/assets/image%20%287%29.png" alt=""></p>
+<h2 id="&#x63D2;&#x69FD;">&#x63D2;&#x69FD;</h2>
+<p>#############################</p>
+<h2 id="&#x52A8;&#x6001;&#x7EC4;&#x4EF6;&#x548C;&#x5F02;&#x6B65;&#x7EC4;&#x4EF6;">&#x52A8;&#x6001;&#x7EC4;&#x4EF6;&#x548C;&#x5F02;&#x6B65;&#x7EC4;&#x4EF6;</h2>
+<p>############</p>
+<h2 id="&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;">&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;</h2>
+<h3 id="&#x8BBF;&#x95EE;&#x5143;&#x7D20;--&#x7EC4;&#x4EF6;-"><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%85%83%E7%B4%A0-amp-%E7%BB%84%E4%BB%B6" target="_blank">&#x8BBF;&#x95EE;&#x5143;&#x7D20; &amp; &#x7EC4;&#x4EF6;</a> <a id="&#x8BBF;&#x95EE;&#x5143;&#x7D20;-amp-&#x7EC4;&#x4EF6;"></a></h3>
+<p>&#x5728;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x6700;&#x597D;&#x4E0D;&#x8981;&#x89E6;&#x8FBE;&#x53E6;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x5185;&#x90E8;&#x6216;&#x624B;&#x52A8;&#x64CD;&#x4F5C; DOM &#x5143;&#x7D20;&#x3002;&#x4E0D;&#x8FC7;&#x4E5F;&#x786E;&#x5B9E;&#x5728;&#x4E00;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x505A;&#x8FD9;&#x4E9B;&#x4E8B;&#x60C5;&#x662F;&#x5408;&#x9002;&#x7684;&#x3002;</p>
+<h4 id="&#x8BBF;&#x95EE;&#x6839;&#x5B9E;&#x4F8B;-"><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E6%A0%B9%E5%AE%9E%E4%BE%8B" target="_blank">&#x8BBF;&#x95EE;&#x6839;&#x5B9E;&#x4F8B;</a> <a id="&#x8BBF;&#x95EE;&#x6839;&#x5B9E;&#x4F8B;"></a></h4>
+<p>&#x5728;&#x6BCF;&#x4E2A; <code>new Vue</code> &#x5B9E;&#x4F8B;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x5176;&#x6839;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>$root</code> &#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x6839;&#x5B9E;&#x4F8B;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Vue &#x6839;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">new</span> Vue({
+  data: {
+    foo: <span class="hljs-number">1</span>
+  },
+  computed: {
+    bar: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">/* ... */</span> }
+  },
+  methods: {
+    baz: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">/* ... */</span> }
+  }
+})
+</code></pre>
+<p>&#x6240;&#x6709;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x90FD;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5168;&#x5C40; store &#x6765;&#x8BBF;&#x95EE;&#x6216;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x83B7;&#x53D6;&#x6839;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;</span>
+<span class="hljs-keyword">this</span>.$root.foo
+
+<span class="hljs-comment">// &#x5199;&#x5165;&#x6839;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;</span>
+<span class="hljs-keyword">this</span>.$root.foo = <span class="hljs-number">2</span>
+
+<span class="hljs-comment">// &#x8BBF;&#x95EE;&#x6839;&#x7EC4;&#x4EF6;&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</span>
+<span class="hljs-keyword">this</span>.$root.bar
+
+<span class="hljs-comment">// &#x8C03;&#x7528;&#x6839;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">this</span>.$root.baz()
+</code></pre>
+<h4 id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;-"><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B" target="_blank">&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;</a> <a id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"></a></h4>
+<p><img src="../.gitbook/assets/image%20%2814%29.png" alt=""></p>
+<p><img src="../.gitbook/assets/image%20%283%29.png" alt=""></p>
+<p><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%AD%90%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E6%88%96%E5%AD%90%E5%85%83%E7%B4%A0" target="_blank">&#x8BBF;&#x95EE;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x6216;&#x5B50;&#x5143;&#x7D20;</a></p>
+<p>&#x5C3D;&#x7BA1;&#x5B58;&#x5728; prop &#x548C;&#x4E8B;&#x4EF6;&#xFF0C;&#x6709;&#x7684;&#x65F6;&#x5019;&#x4F60;&#x4ECD;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5728; JavaScript &#x91CC;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>ref</code> &#x7279;&#x6027;&#x4E3A;&#x8FD9;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A; ID &#x5F15;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;base-input ref=<span class="hljs-string">&quot;usernameInput&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">base-input</span>&gt;</span>
+</span></code></pre>
+<p>&#x73B0;&#x5728;&#x5728;&#x4F60;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x4E86;&#x8FD9;&#x4E2A; <code>ref</code> &#x7684;&#x7EC4;&#x4EF6;&#x91CC;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.$refs.usernameInput
+</code></pre>
+<p>&#x6765;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A; <code>&lt;base-input&gt;</code> &#x5B9E;&#x4F8B;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E0D;&#x65F6;&#x4E4B;&#x9700;&#x3002;&#x6BD4;&#x5982;&#x7A0B;&#x5E8F;&#x5316;&#x5730;&#x4ECE;&#x4E00;&#x4E2A;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x805A;&#x7126;&#x8FD9;&#x4E2A;&#x8F93;&#x5165;&#x6846;&#x3002;&#x5728;&#x521A;&#x624D;&#x90A3;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x8BE5; <code>&lt;base-input&gt;</code> &#x7EC4;&#x4EF6;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684; <code>ref</code> &#x63D0;&#x4F9B;&#x5BF9;&#x5185;&#x90E8;&#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;input ref=<span class="hljs-string">&quot;input&quot;</span>&gt;
+</code></pre>
+<p>&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5176;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">methods: {
+  <span class="hljs-comment">// &#x7528;&#x6765;&#x4ECE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x805A;&#x7126;&#x8F93;&#x5165;&#x6846;</span>
+  focus: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.$refs.input.focus()
+  }
+}
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x5141;&#x8BB8;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x805A;&#x7126; <code>&lt;base-input&gt;</code> &#x91CC;&#x7684;&#x8F93;&#x5165;&#x6846;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.$refs.usernameInput.focus()
+</code></pre>
+<p>&#x5F53; <code>ref</code> &#x548C; <code>v-for</code> &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x5F97;&#x5230;&#x7684;&#x5F15;&#x7528;&#x5C06;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8FD9;&#x4E9B;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x3002;  </p>
+<p><img src="../.gitbook/assets/image%20%2810%29.png" alt=""></p>
+<h3 id="&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;-"><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E7%A8%8B%E5%BA%8F%E5%8C%96%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BE%A6%E5%90%AC%E5%99%A8" target="_blank">&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;</a> <a id="&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;"></a></h3>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86; <code>$emit</code> &#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x88AB; <code>v-on</code> &#x4FA6;&#x542C;&#xFF0C;&#x4F46;&#x662F; Vue &#x5B9E;&#x4F8B;&#x540C;&#x65F6;&#x5728;&#x5176;&#x4E8B;&#x4EF6;&#x63A5;&#x53E3;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x5176;&#x5B83;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#xFF1A;</p>
+<ul>
+<li>&#x901A;&#x8FC7; <code>$on(eventName, eventHandler)</code> &#x4FA6;&#x542C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;</li>
+<li>&#x901A;&#x8FC7; <code>$once(eventName, eventHandler)</code> &#x4E00;&#x6B21;&#x6027;&#x4FA6;&#x542C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;</li>
+<li>&#x901A;&#x8FC7; <code>$off(eventName, eventHandler)</code> &#x505C;&#x6B62;&#x4FA6;&#x542C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;</li>
+</ul>
+<p>&#x4F60;&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#x8FD9;&#x4E9B;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x4E0A;&#x624B;&#x52A8;&#x4FA6;&#x542C;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x6D3E;&#x5F97;&#x4E0A;&#x7528;&#x573A;&#x7684;&#x3002;</p>
+<p><img src="../.gitbook/assets/image%20%282%29.png" alt=""></p>
+<h4 id="&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;-"><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E9%80%9A%E8%BF%87-v-once-%E5%88%9B%E5%BB%BA%E4%BD%8E%E5%BC%80%E9%94%80%E7%9A%84%E9%9D%99%E6%80%81%E7%BB%84%E4%BB%B6" target="_blank">&#x901A;&#x8FC7; <code>v-once</code> &#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;</a> <a id="&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;"></a></h4>
+<p>&#x6E32;&#x67D3;&#x666E;&#x901A;&#x7684; HTML &#x5143;&#x7D20;&#x5728; Vue &#x4E2D;&#x662F;&#x975E;&#x5E38;&#x5FEB;&#x901F;&#x7684;&#xFF0C;&#x4F46;&#x6709;&#x7684;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5305;&#x542B;&#x4E86;<strong>&#x5927;&#x91CF;</strong>&#x9759;&#x6001;&#x5185;&#x5BB9;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6839;&#x5143;&#x7D20;&#x4E0A;&#x6DFB;&#x52A0; <code>v-once</code> &#x7279;&#x6027;&#x4EE5;&#x786E;&#x4FDD;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x53EA;&#x8BA1;&#x7B97;&#x4E00;&#x6B21;&#x7136;&#x540E;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x5C31;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;terms-of-service&apos;</span>, {
+  template: <span class="hljs-string">`
+    &lt;div v-once&gt;
+      &lt;h1&gt;Terms of Service&lt;/h1&gt;
+      ... a lot of static content ...
+    &lt;/div&gt;
+  `</span>
+})
+</code></pre>
+<p><img src="../.gitbook/assets/image%20%285%29.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="untitled.html" class="navigation navigation-prev " aria-label="Previous page: 语法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html" class="navigation navigation-next " aria-label="Next page: 深入响应式原理{双向绑定}">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"深入了解组件","title":"深入了解组件","level":"2.3","depth":1,"next":{"title":"深入响应式原理{双向绑定}","level":"2.4","depth":1,"path":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","ref":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","articles":[]},"previous":{"title":"语法","level":"2.2","depth":1,"path":"vue/untitled.md","ref":"vue/untitled.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/shen-ru-le-jie-zu-jian.md","mtime":"2018-12-26T10:12:21.414Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T10:16:37.315Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
