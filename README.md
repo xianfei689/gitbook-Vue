@@ -1,7 +1,3 @@
----
-description: Vue.js
----
-
 # Vue.js
 
 ## 特点：

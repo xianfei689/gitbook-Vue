@@ -1,7 +1,3 @@
----
-description: 深入了解组件
----
-
 # 深入了解组件
 
 ### [组件名](https://vuejs.bootcss.com/v2/guide/components-registration.html#%E7%BB%84%E4%BB%B6%E5%90%8D) <a id="&#x7EC4;&#x4EF6;&#x540D;"></a>

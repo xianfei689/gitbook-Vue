@@ -9,4 +9,5 @@
 * [深入了解组件](vue/shen-ru-le-jie-zu-jian.md)
 * [深入响应式原理{双向绑定}](vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md)
 * [VUE 3.0 展望~](vue/vue-3.0-zhan-wang.md)
+* [Vue3.0展望 +1](vue/vue3.0-zhan-wang-+1.md)
 
