@@ -200,7 +200,7 @@ Vue.config.keyCodes.f1 = 112
 
 ![](../.gitbook/assets/image%20%284%29.png)
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
 
 
 

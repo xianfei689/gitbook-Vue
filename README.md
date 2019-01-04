@@ -6,11 +6,9 @@
 
 ## 介绍：
 
- 一套用于构建用户界面的**渐进式框架**。 核心库**只关注视图层**。 **易于上手**。
+一套用于构建用户界面的**渐进式框架**。 核心库**只关注视图层**。 **易于上手**。
 
-
-
-### [声明式渲染](https://vuejs.bootcss.com/v2/guide/#%E5%A3%B0%E6%98%8E%E5%BC%8F%E6%B8%B2%E6%9F%93) <a id="&#x58F0;&#x660E;&#x5F0F;&#x6E32;&#x67D3;"></a>
+### [声明式渲染](https://vuejs.bootcss.com/v2/guide/#声明式渲染)  <a id="&#x58F0;&#x660E;&#x5F0F;&#x6E32;&#x67D3;"></a>
 
 Vue.js 的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统：
 
@@ -33,7 +31,7 @@ var app = new Vue({
 Hello Vue!
 ```
 
-### [组件化应用构建](https://vuejs.bootcss.com/v2/guide/#%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BA%94%E7%94%A8%E6%9E%84%E5%BB%BA) <a id="&#x7EC4;&#x4EF6;&#x5316;&#x5E94;&#x7528;&#x6784;&#x5EFA;"></a>
+### [组件化应用构建](https://vuejs.bootcss.com/v2/guide/#组件化应用构建)  <a id="&#x7EC4;&#x4EF6;&#x5316;&#x5E94;&#x7528;&#x6784;&#x5EFA;"></a>
 
 组件系统是 Vue 的另一个重要概念，因为它是一种抽象，允许我们使用小型、独立和通常可复用的组件构建大型应用。仔细想想，几乎任意类型的应用界面都可以抽象为一个组件树：
 
@@ -48,7 +46,7 @@ Vue.component('todo-item', {
 })
 ```
 
- 现在你可以用它构建另一个组件模板：
+现在你可以用它构建另一个组件模板：
 
 ```javascript
 <ol>
@@ -56,6 +54,4 @@ Vue.component('todo-item', {
   <todo-item></todo-item>
 </ol>
 ```
-
-
 
