@@ -39,7 +39,7 @@ actions: {
 }
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/actions.html#%E5%88%86%E5%8F%91-action)分发 Action <a id="&#x5206;&#x53D1;-action"></a>
+###分发 Action 
 
 Action 通过 `store.dispatch` 方法触发：
 
