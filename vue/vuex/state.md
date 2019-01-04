@@ -1,6 +1,6 @@
 # State
 
-####  单一状态树 <a id="&#x5355;&#x4E00;&#x72B6;&#x6001;&#x6811;"></a>
+### 单一状态树 
 
 Vuex 使用**单一状态树**——是的，用一个对象就包含了全部的应用层级状态。至此它便作为一个“唯一数据源 \([SSOT](https://en.wikipedia.org/wiki/Single_source_of_truth)\)”而存在。这也意味着，每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接地定位任一特定的状态片段，在调试的过程中也能轻易地取得整个当前应用状态的快照。在 Vue 组件中获得 Vuex 状态
 
@@ -83,7 +83,7 @@ computed: mapState([
 ])
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/state.html#%E5%AF%B9%E8%B1%A1%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6)对象展开运算符 <a id="&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;"></a>
+###对象展开运算符 
 
 `mapState` 函数返回的是一个对象。我们如何将它与局部计算属性混合使用呢？通常，我们需要使用一个工具函数将多个对象合并为一个，以使我们可以将最终对象传给 `computed` 属性。但是自从有了[对象展开运算符](https://github.com/sebmarkbage/ecmascript-rest-spread)（现处于 ECMASCript 提案 stage-4 阶段），我们可以极大地简化写法：
 
@@ -97,7 +97,7 @@ computed: {
 }
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/state.html#%E7%BB%84%E4%BB%B6%E4%BB%8D%E7%84%B6%E4%BF%9D%E6%9C%89%E5%B1%80%E9%83%A8%E7%8A%B6%E6%80%81)组件仍然保有局部状态 <a id="&#x7EC4;&#x4EF6;&#x4ECD;&#x7136;&#x4FDD;&#x6709;&#x5C40;&#x90E8;&#x72B6;&#x6001;"></a>
+###组件仍然保有局部状态 
 
 使用 Vuex 并不意味着你需要将**所有的**状态放入 Vuex。虽然将所有的状态放到 Vuex 会使状态变化更显式和易调试，但也会使代码变得冗长和不直观。如果有些状态严格属于单个组件，最好还是作为组件的局部状态。你应该根据你的应用开发需要进行权衡和确定。
 
