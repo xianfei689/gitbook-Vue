@@ -31,7 +31,7 @@ var app = new Vue({
 Hello Vue!
 ```
 
-### [组件化应用构建](https://vuejs.bootcss.com/v2/guide/#组件化应用构建)  <a id="&#x7EC4;&#x4EF6;&#x5316;&#x5E94;&#x7528;&#x6784;&#x5EFA;"></a>
+### [组件化应用构建](https://vuejs.bootcss.com/v2/guide/#组件化应用构建) 
 
 组件系统是 Vue 的另一个重要概念，因为它是一种抽象，允许我们使用小型、独立和通常可复用的组件构建大型应用。仔细想想，几乎任意类型的应用界面都可以抽象为一个组件树：
 
