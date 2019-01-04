@@ -12,5 +12,8 @@
 * [Vue3.0展望 +1](vue/vue3.0-zhan-wang-+1.md)
 * [VueX](vue/vuex/README.md)
   * [Getter](vue/vuex/getter.md)
+  * [Module](vue/vuex/module.md)
+  * [Action](vue/vuex/action.md)
+  * [Mutation](vue/vuex/mutation.md)
   * [State](vue/vuex/state.md)
 
