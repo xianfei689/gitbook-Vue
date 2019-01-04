@@ -32,7 +32,7 @@ store.state.a // -> moduleA 的状态
 store.state.b // -> moduleB 的状态
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/modules.html#%E6%A8%A1%E5%9D%97%E7%9A%84%E5%B1%80%E9%83%A8%E7%8A%B6%E6%80%81)模块的局部状态 <a id="&#x6A21;&#x5757;&#x7684;&#x5C40;&#x90E8;&#x72B6;&#x6001;"></a>
+###模块的局部状态 
 
 对于模块内部的 mutation 和 getter，接收的第一个参数是**模块的局部状态对象**。
 
@@ -82,7 +82,7 @@ const moduleA = {
 }
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/modules.html#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4)命名空间 <a id="&#x547D;&#x540D;&#x7A7A;&#x95F4;"></a>
+###命名空间 
 
 默认情况下，模块内部的 action、mutation 和 getter 是注册在**全局命名空间**的——这样使得多个模块能够对同一 mutation 或 action 作出响应。
 
@@ -276,7 +276,7 @@ export function createPlugin (options = {}) {
 }
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/modules.html#%E6%A8%A1%E5%9D%97%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C)模块动态注册 <a id="&#x6A21;&#x5757;&#x52A8;&#x6001;&#x6CE8;&#x518C;"></a>
+###模块动态注册 
 
 在 store 创建**之后**，你可以使用 `store.registerModule` 方法注册模块：
 
@@ -299,7 +299,7 @@ store.registerModule(['nested', 'myModule'], {
 
 在注册一个新 module 时，你很有可能想保留过去的 state，例如从一个服务端渲染的应用保留 state。你可以通过 `preserveState` 选项将其归档：`store.registerModule('a', module, { preserveState: true })`。
 
-#### [\#](https://vuex.vuejs.org/zh/guide/modules.html#%E6%A8%A1%E5%9D%97%E9%87%8D%E7%94%A8)模块重用 <a id="&#x6A21;&#x5757;&#x91CD;&#x7528;"></a>
+###模块重用 
 
 有时我们可能需要创建一个模块的多个实例，例如：
 
