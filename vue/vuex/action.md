@@ -1,6 +1,6 @@
 # Action
 
-## Action <a id="action"></a>
+## Action
 
 Action 类似于 mutation，不同在于：
 
@@ -97,7 +97,7 @@ actions: {
 
 注意我们正在进行一系列的异步操作，并且通过提交 mutation 来记录 action 产生的副作用（即状态变更）。
 
-#### [\#](https://vuex.vuejs.org/zh/guide/actions.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%AD%E5%88%86%E5%8F%91-action)在组件中分发 Action <a id="&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x5206;&#x53D1;-action"></a>
+###在组件中分发 Action 
 
 你在组件中使用 `this.$store.dispatch('xxx')` 分发 action，或者使用 `mapActions` 辅助函数将组件的 methods 映射为 `store.dispatch` 调用（需要先在根节点注入 `store`）：
 
@@ -120,7 +120,7 @@ export default {
 }
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/actions.html#%E7%BB%84%E5%90%88-action)组合 Action <a id="&#x7EC4;&#x5408;-action"></a>
+###组合 Action 
 
 Action 通常是异步的，那么如何知道 action 什么时候结束呢？更重要的是，我们如何才能组合多个 action，以处理更加复杂的异步流程？
 
