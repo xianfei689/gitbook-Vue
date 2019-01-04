@@ -1,6 +1,5 @@
 # Module
 
-  
 Module
 
 由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。
@@ -32,7 +31,7 @@ store.state.a // -> moduleA 的状态
 store.state.b // -> moduleB 的状态
 ```
 
-###模块的局部状态 
+### 模块的局部状态
 
 对于模块内部的 mutation 和 getter，接收的第一个参数是**模块的局部状态对象**。
 
@@ -82,7 +81,7 @@ const moduleA = {
 }
 ```
 
-###命名空间 
+### 命名空间
 
 默认情况下，模块内部的 action、mutation 和 getter 是注册在**全局命名空间**的——这样使得多个模块能够对同一 mutation 或 action 作出响应。
 
@@ -276,7 +275,7 @@ export function createPlugin (options = {}) {
 }
 ```
 
-###模块动态注册 
+### 模块动态注册
 
 在 store 创建**之后**，你可以使用 `store.registerModule` 方法注册模块：
 
@@ -299,7 +298,7 @@ store.registerModule(['nested', 'myModule'], {
 
 在注册一个新 module 时，你很有可能想保留过去的 state，例如从一个服务端渲染的应用保留 state。你可以通过 `preserveState` 选项将其归档：`store.registerModule('a', module, { preserveState: true })`。
 
-###模块重用 
+### 模块重用
 
 有时我们可能需要创建一个模块的多个实例，例如：
 
@@ -310,7 +309,7 @@ store.registerModule(['nested', 'myModule'], {
 
 实际上这和 Vue 组件内的 `data` 是同样的问题。因此解决办法也是相同的——使用一个函数来声明模块状态（仅 2.3.0+ 支持）：
 
-```text
+```js
 const MyReusableModule = {
   state () {
     return {
@@ -320,4 +319,6 @@ const MyReusableModule = {
   // mutation, action 和 getter 等等...
 }
 ```
+
+
 
