@@ -93,7 +93,7 @@ mutations: {
   state.obj = { ...state.obj, newProp: 123 }
   ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/mutations.html#%E4%BD%BF%E7%94%A8%E5%B8%B8%E9%87%8F%E6%9B%BF%E4%BB%A3-mutation-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B)使用常量替代 Mutation 事件类型 <a id="&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x66FF;&#x4EE3;-mutation-&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;"></a>
+###使用常量替代 Mutation 事件类型 
 
 使用常量替代 mutation 事件类型在各种 Flux 实现中是很常见的模式。这样可以使 linter 之类的工具发挥作用，同时把这些常量放在单独的文件中可以让你的代码合作者对整个 app 包含的 mutation 一目了然：
 
