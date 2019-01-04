@@ -24,7 +24,7 @@ const store = new Vuex.Store({
 store.commit('increment')
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/mutations.html#%E6%8F%90%E4%BA%A4%E8%BD%BD%E8%8D%B7%EF%BC%88payload%EF%BC%89)提交载荷（Payload） <a id="&#x63D0;&#x4EA4;&#x8F7D;&#x8377;&#xFF08;payload&#xFF09;"></a>
+#### 提交载荷
 
 你可以向 `store.commit` 传入额外的参数，即 mutation 的 **载荷（payload）**：
 
