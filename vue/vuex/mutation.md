@@ -79,7 +79,7 @@ mutations: {
 }
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/mutations.html#mutation-%E9%9C%80%E9%81%B5%E5%AE%88-vue-%E7%9A%84%E5%93%8D%E5%BA%94%E8%A7%84%E5%88%99)Mutation 需遵守 Vue 的响应规则 <a id="mutation-&#x9700;&#x9075;&#x5B88;-vue-&#x7684;&#x54CD;&#x5E94;&#x89C4;&#x5219;"></a>
+##Mutation 需遵守 Vue 的响应规则 
 
 既然 Vuex 的 store 中的状态是响应式的，那么当我们变更状态时，监视状态的 Vue 组件也会自动更新。这也意味着 Vuex 中的 mutation 也需要与使用 Vue 一样遵守一些注意事项：
 
