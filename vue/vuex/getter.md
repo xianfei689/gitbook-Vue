@@ -35,8 +35,7 @@ const store = new Vuex.Store({
 })
 ```
 
-#### [\#](https://vuex.vuejs.org/zh/guide/getters.html#%E9%80%9A%E8%BF%87%E5%B1%9E%E6%80%A7%E8%AE%BF%E9%97%AE)通过属性访问 <a id="&#x901A;&#x8FC7;&#x5C5E;&#x6027;&#x8BBF;&#x95EE;"></a>
-
+###通过属性访问 
 Getter 会暴露为 `store.getters` 对象，你可以以属性的形式访问这些值：
 
 ```text
@@ -70,7 +69,7 @@ computed: {
 
 注意，getter 在通过属性访问时是作为 Vue 的响应式系统的一部分缓存其中的。
 
-#### [\#](https://vuex.vuejs.org/zh/guide/getters.html#%E9%80%9A%E8%BF%87%E6%96%B9%E6%B3%95%E8%AE%BF%E9%97%AE)通过方法访问 <a id="&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;"></a>
+###通过方法访问 
 
 你也可以通过让 getter 返回一个函数，来实现给 getter 传参。在你对 store 里的数组进行查询时非常有用。
 
@@ -89,7 +88,7 @@ store.getters.getTodoById(2) // -> { id: 2, text: '...', done: false }
 
 注意，getter 在通过方法访问时，每次都会去进行调用，而不会缓存结果。
 
-#### [\#](https://vuex.vuejs.org/zh/guide/getters.html#mapgetters-%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0)`mapGetters` 辅助函数 <a id="mapgetters-&#x8F85;&#x52A9;&#x51FD;&#x6570;"></a>
+###mapGetters 辅助函数 
 
 `mapGetters` 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：
 
