@@ -289,7 +289,7 @@ Vue.component('my-component', {
 
  当 prop 验证失败的时候，\(开发环境构建版本的\) Vue 将会产生一个控制台的警告
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../gitbook/assets/image%20%288%29.png)
 
 #### [类型检查](https://vuejs.bootcss.com/v2/guide/components-props.html#%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5) <a id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;"></a>
 
@@ -384,7 +384,7 @@ this.$emit('update:title', newTitle)
 <text-document v-bind:title.sync="doc.title"></text-document>
 ```
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../gitbook/assets/image%20%281%29.png)
 
  当我们用一个对象同时设置多个 prop 的时候，也可以将这个 `.sync` 修饰符和 `v-bind` 配合使用：
 
@@ -394,7 +394,7 @@ this.$emit('update:title', newTitle)
 
  这样会把 `doc` 对象中的每一个属性 \(如 `title`\) 都作为一个独立的 prop 传进去，然后各自添加用于更新的 `v-on` 监听器。
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../gitbook/assets/image%20%287%29.png)
 
 ## 插槽
 
@@ -450,9 +450,9 @@ this.$root.baz()
 
 #### [访问父级组件实例](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B) <a id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"></a>
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](../gitbook/assets/image%20%2814%29.png)
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../gitbook/assets/image%20%283%29.png)
 
 [访问子组件实例或子元素](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%AD%90%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E6%88%96%E5%AD%90%E5%85%83%E7%B4%A0)
 
@@ -494,7 +494,7 @@ this.$refs.usernameInput.focus()
 当 `ref` 和 `v-for` 一起使用的时候，你得到的引用将会是一个包含了对应数据源的这些子组件的数组。  
 
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../gitbook/assets/image%20%2810%29.png)
 
 ### [程序化的事件侦听器](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E7%A8%8B%E5%BA%8F%E5%8C%96%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BE%A6%E5%90%AC%E5%99%A8) <a id="&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;"></a>
 
@@ -506,7 +506,7 @@ this.$refs.usernameInput.focus()
 
 你通常不会用到这些，但是当你需要在一个组件实例上手动侦听事件时，它们是派得上用场的。
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../gitbook/assets/image%20%282%29.png)
 
 #### [通过 `v-once` 创建低开销的静态组件](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E9%80%9A%E8%BF%87-v-once-%E5%88%9B%E5%BB%BA%E4%BD%8E%E5%BC%80%E9%94%80%E7%9A%84%E9%9D%99%E6%80%81%E7%BB%84%E4%BB%B6) <a id="&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;"></a>
 
@@ -523,5 +523,5 @@ Vue.component('terms-of-service', {
 })
 ```
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../gitbook/assets/image%20%285%29.png)
 
