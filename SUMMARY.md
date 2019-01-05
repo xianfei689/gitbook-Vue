@@ -1,4 +1,4 @@
-# Table of contents
+# Summary
 
 * [Vue.js](README.md)
 
@@ -10,6 +10,7 @@
 * [深入响应式原理{双向绑定}](vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md)
 * [VUE 3.0 展望~](vue/vue-3.0-zhan-wang.md)
 * [Vue3.0展望 +1](vue/vue3.0-zhan-wang-+1.md)
+* [Vue3.0 我的分析](vue30-wo-de-fen-xi.md)
 * [VueX](vue/vuex/README.md)
   * [Getter](vue/vuex/getter.md)
   * [Module](vue/vuex/module.md)
