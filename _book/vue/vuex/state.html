@@ -159,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="../../vue30-wo-de-fen-xi.html">
+        <li class="chapter " data-level="2.5" data-path="../vue30-wo-de-fen-xi.html">
             
-                <a href="../../vue30-wo-de-fen-xi.html">
+                <a href="../vue30-wo-de-fen-xi.html">
             
                     
                     Vue3.0 我的分析
@@ -302,7 +302,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="state">State</h1>
-<h3 id="&#x5355;&#x4E00;&#x72B6;&#x6001;&#x6811;">&#x5355;&#x4E00;&#x72B6;&#x6001;&#x6811;</h3>
+<h2 id="&#x5355;&#x4E00;&#x72B6;&#x6001;&#x6811;">&#x5355;&#x4E00;&#x72B6;&#x6001;&#x6811;</h2>
 <p>Vuex &#x4F7F;&#x7528;<strong>&#x5355;&#x4E00;&#x72B6;&#x6001;&#x6811;</strong>&#x2014;&#x2014;&#x662F;&#x7684;&#xFF0C;&#x7528;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5C31;&#x5305;&#x542B;&#x4E86;&#x5168;&#x90E8;&#x7684;&#x5E94;&#x7528;&#x5C42;&#x7EA7;&#x72B6;&#x6001;&#x3002;&#x81F3;&#x6B64;&#x5B83;&#x4FBF;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x201C;&#x552F;&#x4E00;&#x6570;&#x636E;&#x6E90; (<a href="https://en.wikipedia.org/wiki/Single_source_of_truth" target="_blank">SSOT</a>)&#x201D;&#x800C;&#x5B58;&#x5728;&#x3002;&#x8FD9;&#x4E5F;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x5C06;&#x4EC5;&#x4EC5;&#x5305;&#x542B;&#x4E00;&#x4E2A; store &#x5B9E;&#x4F8B;&#x3002;&#x5355;&#x4E00;&#x72B6;&#x6001;&#x6811;&#x8BA9;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x5730;&#x5B9A;&#x4F4D;&#x4EFB;&#x4E00;&#x7279;&#x5B9A;&#x7684;&#x72B6;&#x6001;&#x7247;&#x6BB5;&#xFF0C;&#x5728;&#x8C03;&#x8BD5;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E5F;&#x80FD;&#x8F7B;&#x6613;&#x5730;&#x53D6;&#x5F97;&#x6574;&#x4E2A;&#x5F53;&#x524D;&#x5E94;&#x7528;&#x72B6;&#x6001;&#x7684;&#x5FEB;&#x7167;&#x3002;&#x5728; Vue &#x7EC4;&#x4EF6;&#x4E2D;&#x83B7;&#x5F97; Vuex &#x72B6;&#x6001;</p>
 <p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x5728; Vue &#x7EC4;&#x4EF6;&#x4E2D;&#x5C55;&#x793A;&#x72B6;&#x6001;&#x5462;&#xFF1F;&#x7531;&#x4E8E; Vuex &#x7684;&#x72B6;&#x6001;&#x5B58;&#x50A8;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#xFF0C;&#x4ECE; store &#x5B9E;&#x4F8B;&#x4E2D;&#x8BFB;&#x53D6;&#x72B6;&#x6001;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x5728;<a href="https://cn.vuejs.org/guide/computed.html" target="_blank">&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</a>&#x4E2D;&#x8FD4;&#x56DE;&#x67D0;&#x4E2A;&#x72B6;&#x6001;&#xFF1A;</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A; Counter &#x7EC4;&#x4EF6;</span>
@@ -339,7 +339,7 @@
   }
 }
 </code></pre>
-<h3 id="mapstate-&#x8F85;&#x52A9;&#x51FD;&#x6570;"><code>mapState</code> &#x8F85;&#x52A9;&#x51FD;&#x6570;</h3>
+<h2 id="mapstate-&#x8F85;&#x52A9;&#x51FD;&#x6570;"><code>mapState</code> &#x8F85;&#x52A9;&#x51FD;&#x6570;</h2>
 <p>&#x5F53;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x591A;&#x4E2A;&#x72B6;&#x6001;&#x65F6;&#x5019;&#xFF0C;&#x5C06;&#x8FD9;&#x4E9B;&#x72B6;&#x6001;&#x90FD;&#x58F0;&#x660E;&#x4E3A;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x4F1A;&#x6709;&#x4E9B;&#x91CD;&#x590D;&#x548C;&#x5197;&#x4F59;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>mapState</code> &#x8F85;&#x52A9;&#x51FD;&#x6570;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x751F;&#x6210;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#xFF0C;&#x8BA9;&#x4F60;&#x5C11;&#x6309;&#x51E0;&#x6B21;&#x952E;&#xFF1A;</p>
 <pre><code class="lang-text">// &#x5728;&#x5355;&#x72EC;&#x6784;&#x5EFA;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#x4E3A; Vuex.mapState
 import { mapState } from &apos;vuex&apos;
@@ -366,7 +366,7 @@ export default {
   &apos;count&apos;
 ])
 </code></pre>
-<h3 id="&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;">&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<h2 id="&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;">&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;</h2>
 <p><code>mapState</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x5C06;&#x5B83;&#x4E0E;&#x5C40;&#x90E8;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x6DF7;&#x5408;&#x4F7F;&#x7528;&#x5462;&#xFF1F;&#x901A;&#x5E38;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x51FD;&#x6570;&#x5C06;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#xFF0C;&#x4EE5;&#x4F7F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x6700;&#x7EC8;&#x5BF9;&#x8C61;&#x4F20;&#x7ED9; <code>computed</code> &#x5C5E;&#x6027;&#x3002;&#x4F46;&#x662F;&#x81EA;&#x4ECE;&#x6709;&#x4E86;<a href="https://github.com/sebmarkbage/ecmascript-rest-spread" target="_blank">&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;</a>&#xFF08;&#x73B0;&#x5904;&#x4E8E; ECMASCript &#x63D0;&#x6848; stage-4 &#x9636;&#x6BB5;&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6781;&#x5927;&#x5730;&#x7B80;&#x5316;&#x5199;&#x6CD5;&#xFF1A;</p>
 <pre><code class="lang-text">computed: {
   localComputed () { /* ... */ },
@@ -376,7 +376,7 @@ export default {
   })
 }
 </code></pre>
-<h3 id="&#x7EC4;&#x4EF6;&#x4ECD;&#x7136;&#x4FDD;&#x6709;&#x5C40;&#x90E8;&#x72B6;&#x6001;">&#x7EC4;&#x4EF6;&#x4ECD;&#x7136;&#x4FDD;&#x6709;&#x5C40;&#x90E8;&#x72B6;&#x6001;</h3>
+<h2 id="&#x7EC4;&#x4EF6;&#x4ECD;&#x7136;&#x4FDD;&#x6709;&#x5C40;&#x90E8;&#x72B6;&#x6001;">&#x7EC4;&#x4EF6;&#x4ECD;&#x7136;&#x4FDD;&#x6709;&#x5C40;&#x90E8;&#x72B6;&#x6001;</h2>
 <p>&#x4F7F;&#x7528; Vuex &#x5E76;&#x4E0D;&#x610F;&#x5473;&#x7740;&#x4F60;&#x9700;&#x8981;&#x5C06;<strong>&#x6240;&#x6709;&#x7684;</strong>&#x72B6;&#x6001;&#x653E;&#x5165; Vuex&#x3002;&#x867D;&#x7136;&#x5C06;&#x6240;&#x6709;&#x7684;&#x72B6;&#x6001;&#x653E;&#x5230; Vuex &#x4F1A;&#x4F7F;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x66F4;&#x663E;&#x5F0F;&#x548C;&#x6613;&#x8C03;&#x8BD5;&#xFF0C;&#x4F46;&#x4E5F;&#x4F1A;&#x4F7F;&#x4EE3;&#x7801;&#x53D8;&#x5F97;&#x5197;&#x957F;&#x548C;&#x4E0D;&#x76F4;&#x89C2;&#x3002;&#x5982;&#x679C;&#x6709;&#x4E9B;&#x72B6;&#x6001;&#x4E25;&#x683C;&#x5C5E;&#x4E8E;&#x5355;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x6700;&#x597D;&#x8FD8;&#x662F;&#x4F5C;&#x4E3A;&#x7EC4;&#x4EF6;&#x7684;&#x5C40;&#x90E8;&#x72B6;&#x6001;&#x3002;&#x4F60;&#x5E94;&#x8BE5;&#x6839;&#x636E;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6743;&#x8861;&#x548C;&#x786E;&#x5B9A;&#x3002;</p>
 
                                 
@@ -417,7 +417,7 @@ export default {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"State","level":"2.6.5","depth":2,"previous":{"title":"Mutation","level":"2.6.4","depth":2,"path":"vue/vuex/mutation.md","ref":"vue/vuex/mutation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex/state.md","mtime":"2019-01-05T08:41:12.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-06T14:34:50.992Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"State","level":"2.6.5","depth":2,"previous":{"title":"Mutation","level":"2.6.4","depth":2,"path":"vue/vuex/mutation.md","ref":"vue/vuex/mutation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex/state.md","mtime":"2019-01-07T14:01:27.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T14:01:42.443Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

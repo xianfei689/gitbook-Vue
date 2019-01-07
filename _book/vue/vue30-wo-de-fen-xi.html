@@ -1,0 +1,507 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Vue3.0 我的分析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vuex/" />
+    
+    
+    <link rel="prev" href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Vue</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="sheng-ming-zhou-qi.html">
+            
+                <a href="sheng-ming-zhou-qi.html">
+            
+                    
+                    生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="untitled.html">
+            
+                <a href="untitled.html">
+            
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="shen-ru-le-jie-zu-jian.html">
+            
+                <a href="shen-ru-le-jie-zu-jian.html">
+            
+                    
+                    深入了解组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html">
+            
+                <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html">
+            
+                    
+                    深入响应式原理{双向绑定}
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="vue30-wo-de-fen-xi.html">
+            
+                <a href="vue30-wo-de-fen-xi.html">
+            
+                    
+                    Vue3.0 我的分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="vuex/">
+            
+                <a href="vuex/">
+            
+                    
+                    VueX
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="vuex/getter.html">
+            
+                <a href="vuex/getter.html">
+            
+                    
+                    Getter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="vuex/module.html">
+            
+                <a href="vuex/module.html">
+            
+                    
+                    Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="vuex/action.html">
+            
+                <a href="vuex/action.html">
+            
+                    
+                    Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="vuex/mutation.html">
+            
+                <a href="vuex/mutation.html">
+            
+                    
+                    Mutation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.5" data-path="vuex/state.html">
+            
+                <a href="vuex/state.html">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Vue3.0 我的分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="vue30-&#x6211;&#x7684;&#x5206;&#x6790;">Vue3.0 &#x6211;&#x7684;&#x5206;&#x6790;</h1>
+<ul>
+<li>&#x66F4;<strong>&#x5FEB;</strong></li>
+<li>&#x66F4;<strong>&#x5C0F;</strong></li>
+<li>&#x66F4;<strong>&#x6613;&#x4E8E;&#x7EF4;&#x62A4;</strong></li>
+<li>&#x66F4;&#x597D;&#x7684;<strong>&#x591A;&#x7AEF;&#x6E32;&#x67D3;&#x652F;&#x6301;</strong></li>
+<li>&#x65B0;&#x529F;&#x80FD;&#xFF08;&#x65B0;&#x7684;API&#xFF09;</li>
+</ul>
+<h2 id="&#x66F4;&#x5FEB;">&#x66F4;<strong>&#x5FEB;</strong></h2>
+<ul>
+<li><strong>&#x6570;&#x636E;&#x76D1;&#x542C;&#x7CFB;&#x7EDF;&#x7684;&#x5347;&#x7EA7;</strong><em><strong>**</strong></em><ul>
+<li>&#x4ECE;V2.X&#x7684;&#x57FA;&#x4E8E;ES5&#x7684;getter/setter(&#x4E5F;&#x5C31;&#x662F;Object&#x3002;defineProperty&#x8FD9;&#x4E2A;API)&#xFF0C;&#x5230;V3.X&#x7684;&#x57FA;&#x4E8E;proxy&#xFF08;&#x5B9E;&#x73B0;&#xFF09;&#x8FD9;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x636E;&#x7CFB;&#x7EDF;</li>
+<li>&#x5168;&#x8BED;&#x8A00;&#x7279;&#x6027;&#x652F;&#x6301;: 1. &#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x589E;&#x52A0;/&#x5220;&#x9664; 2. &#x6570;&#x7EC4;index/length &#x4FEE;&#x6539; 3. Map,Set,WeakMap,WeakSet</li>
+<li>&#x5E94;&#x7528;&#x521D;&#x59CB;&#x5316;&#x4FA6;&#x542C;&#x5927;&#x89C4;&#x6A21;&#x7684;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6027;&#x80FD;&#x4E5F;&#x4F1A;&#x5F97;&#x5230;&#x63D0;&#x5347;&#x3002;&#x57FA;&#x4E8E;proxy&#x76D1;&#x542C;&#xFF0C;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;<strong>Lazy by default</strong>&#xFF08;&#x5F53;&#x53EA;&#x6709;&#x6570;&#x636E;&#x88AB;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x624D;&#x4F1A;&#x76D1;&#x542C;&#x5B83;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6709;&#x4E00;&#x4E2A;&#x5E9E;&#x5927;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x53EA;&#x7528;&#x4E86;&#x5176;&#x4E2D;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#xFF0C;&#x90A3;&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x53EA;&#x4F1A;&#x76D1;&#x542C;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x5C0F;&#x90E8;&#x5206;</li>
+</ul>
+</li>
+<li><p><strong>Virtual DOM &#x5B8C;&#x5168;&#x91CD;&#x5199;&#xFF0C;&#x7F16;&#x8BD1;&#x65F6;&#x4F18;&#x5316;&#xFF0C;&#x4EE5;&#x51CF;&#x5C11;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5F00;&#x9500;&#xFF0C;&#x521D;&#x59CB;&#x6E32;&#x67D3;/&#x66F4;&#x65B0;&#x63D0;&#x901F; 100% &#xFF1B;</strong></p>
+<ul>
+<li>(Component fast path&#xFF09;&#x7F16;&#x8BD1;&#x65F6;&#x5224;&#x65AD;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#xFF08;&#x662F;&#x5426;&#x662F;&#x539F;&#x751F;&#x5143;&#x7D20;or&#x7EC4;&#x4EF6;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x539F;&#x751F;&#x5143;&#x7D20;&#x7684;&#x8BDD;&#x76F4;&#x63A5;&#x751F;&#x6210;&#x5143;&#x7D20;&#x5143;&#x7D20;&#x5BF9;&#x5E94;&#x7684;Vitrual DOM&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7EC4;&#x4EF6;&#x90A3;&#x4E48;&#x751F;&#x6210;&#x7EC4;&#x4EF6;&#x4EE3;&#x7801;</li>
+<li>(Monomorphic calls)&#x751F;&#x6210;&#x865A;&#x62DF;Node&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x8981;&#x7ADF;&#x53EF;&#x80FD;&#x7684;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x540C;&#x6837;&#x4E2A;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5229;&#x4E8E;JS&#x5F15;&#x64CE;&#x7684;&#x4F18;&#x5316;</li>
+<li><p>&#xFF08;Children type detection&#xFF09;&#x8FD0;&#x884C;&#x65F6;&#x7559;&#x4E0B;Hint&#xFF0C;&#x9759;&#x6001;&#x5206;&#x6790;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x4EE5;&#x4FBF;&#x8DF3;&#x8FC7;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x5224;&#x65AD;</p>
+<p><img src="../.gitbook/assets/15466964219026.jpg" alt="-w1369"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x4F18;&#x5316;Slots&#x751F;&#x6210;</strong></p>
+<ul>
+<li>&#x62C6;&#x5206;&#x7236;&#x7EC4;&#x4EF6;&#x548C;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x8026;&#x5408;&#x5173;&#x7CFB;&#xFF0C;&#x5F15;&#x5165;&#x751F;&#x6210;&#x51FD;&#x6570;&#xFF0C;scope&#x3001;slot&#x7EDF;&#x4E00;&#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x7531;&#x5B50;&#x7EC4;&#x4EF6;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x628A;&#x4F20;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x5206;&#x914D;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#x6765;&#x5B8C;&#x6210;&#x6536;&#x96C6;&#xFF0C;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#xFF1B;</li>
+<li><p>&#x771F;&#x6B63;&#x4F9D;&#x8D56;&#x6478;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x624D;&#x4F1A;&#x53EF;&#x80FD;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x5C31;&#x4E0D;&#x5B58;&#x5728;&#x53BB;&#x624B;&#x52A8;&#x4F18;&#x5316;&#x7EC4;&#x4EF6;&#x8FC7;&#x5EA6;&#x91CD;&#x7ED8;&#x7684;&#x95EE;&#x9898;</p>
+<p><img src="../.gitbook/assets/15467749626441.jpg" alt="-w1298"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x9759;&#x6001;&#x5185;&#x5BB9;&#x63D0;&#x53D6;</strong></p>
+<ul>
+<li><p>&#x68C0;&#x67E5;&#x5230;&#x4E00;&#x90E8;&#x5206;&#x6A21;&#x677F;&#x4E0D;&#x4F1A;&#x53D8;&#xFF0C;&#x76F4;&#x63A5;&#x63D0;&#x53D6;&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x66F4;&#x65B0;&#x4E2D;&#xFF0C;&#x76F4;&#x63A5;&#x590D;&#x7528;&#x4E4B;&#x524D;&#x7684;Vitrual DOM&#xFF0C;&#x751A;&#x81F3;&#x6BD4;&#x5BF9;&#x8FC7;&#x7A0B;&#x8DF3;&#x8FC7;&#x6574;&#x4E2A;&#x6811; </p>
+<p><img src="../.gitbook/assets/15467749912434.jpg" alt="-w1165"></p>
+</li>
+<li><p>&#x5982;&#x679C;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x7684;&#x90FD;&#x662F;&#x9759;&#x6001;&#x7684;&#xFF0C;&#x63D0;&#x53D6;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x6BD4;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;data&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x6BD4;&#x5BF9;&#xFF0C;&#x53EA;&#x8981;&#x6BD4;&#x5BF9;&#x5B83;&#x7684;children&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1B;</p>
+<p><img src="../.gitbook/assets/15467750422474.jpg" alt="-w1268"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x5185;&#x8054;&#x4E8B;&#x4EF6;&#x51FD;&#x6570;&#x63D0;&#x53D6;</strong> <code>&lt;Com @event=&quot;count++&quot;/&gt;</code></p>
+<ul>
+<li><p>&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x751F;&#x6210;&#x65B0;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F1A;&#x5BF9;&#x5185;&#x8054;&#x4E8B;&#x4EF6;&#x7F13;&#x5B58;&#xFF08;Cache&#xFF09;&#xFF0C;&#x65B9;&#x4FBF;&#x91CD;&#x7528;&#xFF0C;&#x907F;&#x514D;&#x5B50;&#x7EC4;&#x4EF6;&#x65E0;&#x754F;&#x66F4;&#x65B0;&#x7684;&#x6548;&#x679C;</p>
+<p><img src="../.gitbook/assets/15467750993057.jpg" alt="-w1302"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x6027;&#x80FD;&#x538B;&#x6D4B;</strong></p>
+<ul>
+<li><p>&#x5B9E;&#x6D4B;&#xFF0C;<strong>&#x5185;&#x5B58;&#x51CF;&#x534A;&#xFF0C;&#x901F;&#x5EA6;&#x52A0;&#x500D;</strong></p>
+<p><img src="../.gitbook/assets/15467842062672.jpg" alt="-w681"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x66F4;&#x5C0F;">&#x66F4;<strong>&#x5C0F;</strong></h2>
+<ul>
+<li>Vue&#x6574;&#x4E2A;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x548C;Tree-shaking&#x914D;&#x5408;&#x8D77;&#x6765;&#xFF0C;&#x628A;&#x6CA1;&#x6709;&#x7528;&#x8FC7;&#x7684;&#x4EE3;&#x7801;&#x5728;&#x6700;&#x540E;&#x7684;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x6254;&#x6389;&#x3002;Vue2.X&#x7684;&#x6574;&#x4E2A;&#x4EE3;&#x7801;&#x53EA;&#x6709;&#x4E00;&#x4E2A;Vue&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x4E1C;&#x897F;&#x90FD;&#x5728;Vue&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x6240;&#x6709;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x7684;&#x4E1C;&#x897F;&#x5C31;&#x6CA1;&#x6709;&#x6254;&#x6389;&#x3002;&#x4F46;Vue3.X&#x4E0D;&#x662F;&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x90FD;&#x9700;&#x8981;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x505A;&#x6210;&#x4E86;&#x6309;&#x9700;&#x5F15;&#x5165;&#xFF08;&#x7528;ES module imports&#x6309;&#x9700;&#x5F15;&#x5165;&#xFF09;&#xFF0C;&#x6309;&#x9700;&#x7684;&#x6A21;&#x5757;&#x5982;&#x4E0B;&#xFF1A;<ul>
+<li>&#x5185;&#x7F6E;&#x7EC4;&#x4EF6;&#xFF08;keep-alive&#xFF0C;transition...)</li>
+<li>&#x6307;&#x4EE4;&#x7684;&#x8FD0;&#x884C;&#x65F6;helper&#xFF08;v-model&#xFF0C;v-for...)</li>
+<li>&#x5404;&#x79CD;&#x5DE5;&#x5177;&#x51FD;&#x6570;&#xFF08;asycComponent,mixins,memoize...)</li>
+</ul>
+</li>
+<li>&#x5F53;&#x53EA;&#x6709;&#x7528;&#x5230;Vue&#x6700;&#x6838;&#x5FC3;&#x7684;&#x529F;&#x80FD;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x5176;&#x4ED6;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x90FD;&#x88AB;Tree-shaking&#xFF09;&#xFF0C;&#x4EFB;&#x4F55;Vue&#x90FD;&#x4F1A;&#x7528;&#x5230;&#x7684;&#x90A3;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5176;&#x4ED6;&#x65E0;&#x5173;&#x7684;&#x4E1C;&#x897F;&#x90FD;Tree-shaking&#x6389;&#x4E4B;&#x540E;&#xFF0C;&#x5269;&#x4E0B;~10KB </li>
+</ul>
+<h2 id="&#x66F4;&#x6613;&#x4E8E;&#x7EF4;&#x62A4;">&#x66F4;<strong>&#x6613;&#x4E8E;&#x7EF4;&#x62A4;</strong></h2>
+<ul>
+<li><strong>Flow&#xFF08;facebook&#xFF09;-&gt;TypeScript&#xFF08;Microsoft&#xFF09; &#x91CD;&#x5199;</strong>&#xFF0C;&#x5185;&#x90E8;&#x7684;&#x6A21;&#x5757;&#x89E3;&#x8026;&#xFF0C;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x66F4;&#x597D;&#x7684;&#x7406;&#x89E3;&#x6E90;&#x7801; <img src="../.gitbook/assets/15467800167462.jpg" alt="-w557"></li>
+<li><strong>&#x7F16;&#x8BD1;&#x5668;&#x91CD;&#x5199;</strong><ul>
+<li>&#x63D2;&#x4EF6;&#x5316;&#x8BBE;&#x8BA1;</li>
+<li>&#x5E26;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x7684;parser&#xFF08;source maps)</li>
+<li>&#x4E3A;&#x66F4;&#x597D;&#x7684;IDE&#x5DE5;&#x5177;&#x94FE;&#x94FA;&#x8DEF;&#xFF0C;&#x5982; vetur&#x4F5C;&#x8005;&#x4F5C;&#x4E3A;vscode&#x56E2;&#x961F;&#x6210;&#x5458;&#x53C2;&#x4E0E;&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x91CD;&#x6784;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x66F4;&#x597D;&#x7684;&#x591A;&#x7AEF;&#x6E32;&#x67D3;&#x652F;&#x6301;">&#x66F4;&#x597D;&#x7684;<strong>&#x591A;&#x7AEF;&#x6E32;&#x67D3;&#x652F;&#x6301;</strong></h2>
+<ul>
+<li><strong>&#x573A;&#x666F;</strong><ul>
+<li>Vue native</li>
+<li>wexx</li>
+<li>mpvue&#x5C0F;&#x7A0B;&#x5E8F;</li>
+</ul>
+</li>
+<li><p>vue&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x65F6;&#x53BB;&#x652F;&#x6301;&#x7F16;&#x8BD1;&#x5230;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x591A;&#x7AEF;&#xFF0C;&#x53EF;&#x4EE5;Learn once,run anywhere</p>
+<ul>
+<li><p>&#x5F15;&#x5165;Custom Render API&#xFF0C;&#x5728; import {createRenderer} from &apos;@vue/runtime-core&apos;&#xFF0C;&#x5E73;&#x53F0;&#x65E0;&#x5173;vue runtime</p>
+<p><img src="../.gitbook/assets/15467812232804.jpg" alt="-w1266"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x65B0;&#x529F;&#x80FD;&#xFF08;&#x65B0;&#x7684;api&#xFF09;">&#x65B0;&#x529F;&#x80FD;&#xFF08;&#x65B0;&#x7684;API&#xFF09;</h2>
+<ul>
+<li><p><strong>&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x76D1;&#x542C;API</strong></p>
+<ul>
+<li><p>&#x8F7B;&#x677E;&#x5B9E;&#x73B0;&#x57AE;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x5171;&#x4EAB;</p>
+<p><img src="../.gitbook/assets/15467815920125.jpg" alt="-w1088"></p>
+</li>
+</ul>
+</li>
+<li>&#x6392;&#x67E5;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x7684;&#x89E6;&#x53D1;&#x539F;&#x56E0;&#xFF08;&#x63D0;&#x4F9B;&#x65B0;&#x7684; renderTriggered API&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;debugger&#x7A76;&#x7ADF;&#x54EA;&#x4E00;&#x884C;&#x89E6;&#x53D1;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0; <img src="../.gitbook/assets/15467817113261.jpg" alt="-w1218"></li>
+<li>&#x66F4;&#x597D;&#x7684;typeScript &#x652F;&#x6301;&#x4EE5;&#x53CA;&#x539F;&#x751F;&#x7684;Class API &#x548C; TSX</li>
+<li>&#x66F4;&#x597D;&#x7684;&#x8B66;&#x544A;&#x4FE1;&#x606F;<ul>
+<li>&#x7EC4;&#x4EF6;&#x5806;&#x6808;&#x5305;&#x542B;&#x51FD;&#x6570;&#x5F0F;&#x7EC4;&#x4EF6;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;&#x8B66;&#x544A;&#x4FE1;&#x606F;&#x4E2D;&#x67E5;&#x770B;&#x7EC4;&#x4EF6;&#x7684;props</li>
+<li>&#x5728;&#x66F4;&#x65B0;&#x7684;&#x8B66;&#x544A;&#x4E2D;&#x63D0;&#x4F9B;&#x7EC4;&#x4EF6;&#x5806;&#x6808;&#x4FE1;&#x606F;</li>
+</ul>
+</li>
+<li>Experimental Hooks API&#xFF0C;&#x903B;&#x8F91;&#x91CD;&#x7528;&#x673A;&#x5236;&#xFF0C;&#x53EF;&#x80FD;&#x53D6;&#x4EE3;mixins</li>
+<li>Time Slicing Support &#x5207;&#x5272;JavaScript &#x8BA1;&#x7B97;&#xFF0C;&#x4E00;&#x5E27;&#x4E00;&#x5E27;&#x53BB;&#x5904;&#x7406;&#xFF0C;&#x9884;&#x7559;&#x6BCF;16ms yield&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x8BA9;&#x7528;&#x6237;&#x4E8B;&#x4EF6;&#x91CD;&#x65B0;&#x8FDB;&#x6765;&#xFF0C;&#x5141;&#x8BB8;&#x4E2D;&#x95F4;&#x7528;&#x6237;&#x6DFB;&#x52A0;&#x8FDB;&#x4E8B;&#x4EF6;&#xFF08;&#x80CC;&#x666F;&#xFF1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4E3B;&#x7EBF;&#x7A0B;&#x91CC;&#xFF0C;&#x8FDB;&#x884C;&#x5927;&#x91CF;&#x7684;javascript&#x64CD;&#x4F5C;&#xFF0C;&#x4F1A;&#x4F7F;&#x5F97;&#x6574;&#x4E2A;&#x4E3B;&#x7EBF;&#x7A0B;&#x88AB;block&#xFF0C;&#x90A3;&#x4E48;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5904;&#x5728;&#x4E00;&#x4E2A;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x54CD;&#x5E94;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x70B9;&#x51FB;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x5168;&#x90FD;&#x65E0;&#x6CD5;&#x88AB;&#x54CD;&#x5E94;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x5BFC;&#x81F4;&#x4E86;&#x5927;&#x91CF;&#x7684;JavaScript&#x8BA1;&#x7B97;&#xFF0C;&#x540C;&#x65F6;&#x7528;&#x6237;&#x8FD8;&#x5728;&#x7EE7;&#x7EED;&#x8F93;&#x5165;&#xFF0C;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x5927;&#x91CF;&#x7684;&#x8BA1;&#x7B97;&#x88AB;&#x91CD;&#x590D;&#x63A8;&#x8FDB;&#x6765;&#xFF0C;&#x90A3;&#x4E48;&#x6027;&#x80FD;&#x5C31;&#x76F4;&#x7EBF;&#x4E0B;&#x964D;&#xFF0C;&#x6539;&#x8FDB;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF1F;&#xFF09;</li>
+<li>IE&#x652F;&#x6301;&#x95EE;&#x9898;&#xFF0C;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x7684;API&#x65B9;&#x9762;&#x7684;&#x6539;&#x8FDB;&#x662F;&#x4E0D;&#x80FD;&#x7528;&#x7684;<ul>
+<li>&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x7684;&#x7248;&#x672C;&#x5728;IE11&#x4E2D;&#x81EA;&#x52A8;&#x964D;&#x7EA7;&#x4E3A;&#x65E7;&#x7684;getter/setter&#x673A;&#x5236;&#xFF0C;&#x5E76;&#x5BF9;IE&#x4E2D;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x8BED;&#x6CD5;&#x7ED9;&#x51FA;&#x8B66;&#x544A;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html" class="navigation navigation-prev " aria-label="Previous page: 深入响应式原理{双向绑定}">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vuex/" class="navigation navigation-next " aria-label="Next page: VueX">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Vue3.0 我的分析","level":"2.5","depth":1,"next":{"title":"VueX","level":"2.6","depth":1,"path":"vue/vuex/README.md","ref":"vue/vuex/README.md","articles":[{"title":"Getter","level":"2.6.1","depth":2,"path":"vue/vuex/getter.md","ref":"vue/vuex/getter.md","articles":[]},{"title":"Module","level":"2.6.2","depth":2,"path":"vue/vuex/module.md","ref":"vue/vuex/module.md","articles":[]},{"title":"Action","level":"2.6.3","depth":2,"path":"vue/vuex/action.md","ref":"vue/vuex/action.md","articles":[]},{"title":"Mutation","level":"2.6.4","depth":2,"path":"vue/vuex/mutation.md","ref":"vue/vuex/mutation.md","articles":[]},{"title":"State","level":"2.6.5","depth":2,"path":"vue/vuex/state.md","ref":"vue/vuex/state.md","articles":[]}]},"previous":{"title":"深入响应式原理{双向绑定}","level":"2.4","depth":1,"path":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","ref":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vue30-wo-de-fen-xi.md","mtime":"2019-01-07T14:01:27.952Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T14:01:42.443Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
