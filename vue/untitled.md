@@ -2,9 +2,9 @@
 
 ## 模板语法
 
-### [插值](https://vuejs.bootcss.com/v2/guide/syntax.html#%E6%8F%92%E5%80%BC) <a id="&#x63D2;&#x503C;"></a>
+### [插值](https://vuejs.bootcss.com/v2/guide/syntax.html#插值)  <a id="&#x63D2;&#x503C;"></a>
 
-#### [文本](https://vuejs.bootcss.com/v2/guide/syntax.html#%E6%96%87%E6%9C%AC) <a id="&#x6587;&#x672C;"></a>
+#### [文本](https://vuejs.bootcss.com/v2/guide/syntax.html#文本)  <a id="&#x6587;&#x672C;"></a>
 
 数据绑定最常见的形式就是使用“Mustache”语法 \(双大括号\) 的文本插值：
 
@@ -20,7 +20,7 @@ Mustache 标签将会被替代为对应数据对象上 `msg` 属性的值。无�
 <span v-once>这个将不会改变: {{ msg }}</span>
 ```
 
-#### [原始 HTML](https://vuejs.bootcss.com/v2/guide/syntax.html#%E5%8E%9F%E5%A7%8B-HTML) <a id="&#x539F;&#x59CB;-HTML"></a>
+#### [原始 HTML](https://vuejs.bootcss.com/v2/guide/syntax.html#原始-HTML)  <a id="&#x539F;&#x59CB;-HTML"></a>
 
 双大括号会将数据解释为普通文本，而非 HTML 代码。为了输出真正的 HTML，你需要使用 `v-html` 指令：
 
@@ -29,13 +29,13 @@ Mustache 标签将会被替代为对应数据对象上 `msg` 属性的值。无�
 <p>Using v-html directive: <span v-html="rawHtml"></span></p>
 ```
 
-![](../gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image-12.png)
 
- 这个 `span` 的内容将会被替换成为属性值 `rawHtml`，直接作为 HTML——会忽略解析属性值中的数据绑定。注意，你不能使用 `v-html` 来复合局部模板，因为 Vue 不是基于字符串的模板引擎。反之，对于用户界面 \(UI\)，组件更适合作为可重用和可组合的基本单位。
+这个 `span` 的内容将会被替换成为属性值 `rawHtml`，直接作为 HTML——会忽略解析属性值中的数据绑定。注意，你不能使用 `v-html` 来复合局部模板，因为 Vue 不是基于字符串的模板引擎。反之，对于用户界面 \(UI\)，组件更适合作为可重用和可组合的基本单位。
 
-![](../gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
-#### [特性](https://vuejs.bootcss.com/v2/guide/syntax.html#%E7%89%B9%E6%80%A7) <a id="&#x7279;&#x6027;"></a>
+#### [特性](https://vuejs.bootcss.com/v2/guide/syntax.html#特性)  <a id="&#x7279;&#x6027;"></a>
 
 Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [v-bind 指令](https://vuejs.bootcss.com/v2/api/#v-bind)：
 
@@ -43,7 +43,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <div v-bind:id="dynamicId"></div>
 ```
 
-#### [使用 JavaScript 表达式](https://vuejs.bootcss.com/v2/guide/syntax.html#%E4%BD%BF%E7%94%A8-JavaScript-%E8%A1%A8%E8%BE%BE%E5%BC%8F) <a id="&#x4F7F;&#x7528;-JavaScript-&#x8868;&#x8FBE;&#x5F0F;"></a>
+#### [使用 JavaScript 表达式](https://vuejs.bootcss.com/v2/guide/syntax.html#使用-JavaScript-表达式)  <a id="&#x4F7F;&#x7528;-JavaScript-&#x8868;&#x8FBE;&#x5F0F;"></a>
 
 迄今为止，在我们的模板中，我们一直都只绑定简单的属性键值。但实际上，对于所有的数据绑定，Vue.js 都提供了完全的 JavaScript 表达式支持。
 
@@ -57,7 +57,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <div v-bind:id="'list-' + id"></div>
 ```
 
- 这些表达式会在所属 Vue 实例的数据作用域下作为 JavaScript 被解析。有个限制就是，每个绑定都只能包含**单个表达式**，所以下面的例子都**不会**生效。
+这些表达式会在所属 Vue 实例的数据作用域下作为 JavaScript 被解析。有个限制就是，每个绑定都只能包含**单个表达式**，所以下面的例子都**不会**生效。
 
 ```javascript
 <!-- 这是语句，不是表达式 -->
@@ -67,9 +67,9 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 {{ if (ok) { return message } }}
 ```
 
-### [缩写](https://vuejs.bootcss.com/v2/guide/syntax.html#%E7%BC%A9%E5%86%99) <a id="&#x7F29;&#x5199;"></a>
+### [缩写](https://vuejs.bootcss.com/v2/guide/syntax.html#缩写)  <a id="&#x7F29;&#x5199;"></a>
 
-#### [`v-bind` 缩写](https://vuejs.bootcss.com/v2/guide/syntax.html#v-bind-%E7%BC%A9%E5%86%99) <a id="v-bind-&#x7F29;&#x5199;"></a>
+#### [`v-bind` 缩写](https://vuejs.bootcss.com/v2/guide/syntax.html#v-bind-缩写)  <a id="v-bind-&#x7F29;&#x5199;"></a>
 
 ```markup
 <!-- 完整语法 -->
@@ -79,7 +79,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <a :href="url">...</a>
 ```
 
-#### [`v-on` 缩写](https://vuejs.bootcss.com/v2/guide/syntax.html#v-on-%E7%BC%A9%E5%86%99) <a id="v-on-&#x7F29;&#x5199;"></a>
+#### [`v-on` 缩写](https://vuejs.bootcss.com/v2/guide/syntax.html#v-on-缩写)  <a id="v-on-&#x7F29;&#x5199;"></a>
 
 ```markup
 <!-- 完整语法 -->
@@ -91,9 +91,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 
 ## 事件语法
 
-
-
-### [事件修饰符](https://vuejs.bootcss.com/v2/guide/events.html#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6) <a id="&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;"></a>
+### [事件修饰符](https://vuejs.bootcss.com/v2/guide/events.html#事件修饰符)  <a id="&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;"></a>
 
 在事件处理程序中调用 `event.preventDefault()` 或 `event.stopPropagation()` 是非常常见的需求。尽管我们可以在方法中轻松实现这点，但更好的方式是：方法只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。
 
@@ -105,8 +103,6 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 * `.self`
 * `.once`
 * `.passive`
-
-
 
 ```markup
 <!-- 阻止单击事件继续传播 -->
@@ -130,18 +126,18 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <div v-on:click.self="doThat">...</div>
 ```
 
-![](../gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image-6.png)
 
- 2.1.4 新增
+2.1.4 新增
 
 ```markup
 <!-- 点击事件将只会触发一次 -->
 <a v-on:click.once="doThis"></a>
 ```
 
- 2.3.0 新增
+2.3.0 新增
 
- Vue 还对应 [`addEventListener` 中的 `passive` 选项](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters)提供了 `.passive` 修饰符。
+Vue 还对应 [`addEventListener` 中的 `passive` 选项](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters)提供了 `.passive` 修饰符。
 
 ```markup
 <!-- 滚动事件的默认行为 (即滚动行为) 将会立即触发 -->
@@ -150,11 +146,11 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <div v-on:scroll.passive="onScroll">...</div>
 ```
 
- 这个 `.passive` 修饰符尤其能够提升移动端的性能。
+这个 `.passive` 修饰符尤其能够提升移动端的性能。
 
-![](../gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image-16.png)
 
-### [按键修饰符](https://vuejs.bootcss.com/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6) <a id="&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"></a>
+### [按键修饰符](https://vuejs.bootcss.com/v2/guide/events.html#按键修饰符)  <a id="&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"></a>
 
 在监听键盘事件时，我们经常需要检查常见的键值。Vue 允许为 `v-on` 在监听键盘事件时添加按键修饰符：
 
@@ -163,7 +159,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <input v-on:keyup.13="submit">
 ```
 
- 记住所有的 `keyCode` 比较困难，所以 Vue 为最常用的按键提供了别名：
+记住所有的 `keyCode` 比较困难，所以 Vue 为最常用的按键提供了别名：
 
 ```markup
 <!-- 同上 -->
@@ -194,19 +190,17 @@ Vue.config.keyCodes.f1 = 112
 
 ## 表单输入绑定
 
-### [基础用法](https://vuejs.bootcss.com/v2/guide/forms.html#%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95) <a id="&#x57FA;&#x7840;&#x7528;&#x6CD5;"></a>
+### [基础用法](https://vuejs.bootcss.com/v2/guide/forms.html#基础用法)  <a id="&#x57FA;&#x7840;&#x7528;&#x6CD5;"></a>
 
 你可以用 `v-model` 指令在表单 `<input>`、`<textarea>` 及 `<select>` 元素上创建双向数据绑定。它会根据控件类型自动选取正确的方法来更新元素。尽管有些神奇，但 `v-model` 本质上不过是语法糖。它负责监听用户的输入事件以更新数据，并对一些极端场景进行一些特殊处理。
 
-![](../gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image-4.png)
 
-![](../gitbook/assets/image%20%2818%29.png)
+![](../.gitbook/assets/image-18.png)
 
+### [修饰符](https://vuejs.bootcss.com/v2/guide/forms.html#修饰符)  <a id="&#x4FEE;&#x9970;&#x7B26;"></a>
 
-
-### [修饰符](https://vuejs.bootcss.com/v2/guide/forms.html#%E4%BF%AE%E9%A5%B0%E7%AC%A6) <a id="&#x4FEE;&#x9970;&#x7B26;"></a>
-
-#### [`.lazy`](https://vuejs.bootcss.com/v2/guide/forms.html#lazy) <a id="lazy"></a>
+#### [`.lazy`](https://vuejs.bootcss.com/v2/guide/forms.html#lazy)  <a id="lazy"></a>
 
 在默认情况下，`v-model` 在每次 `input` 事件触发后将输入框的值与数据进行同步 \(除了[上述](https://vuejs.bootcss.com/v2/guide/forms.html#vmodel-ime-tip)输入法组合文字时\)。你可以添加 `lazy` 修饰符，从而转变为使用 `change`事件进行同步：
 
@@ -215,7 +209,7 @@ Vue.config.keyCodes.f1 = 112
 <input v-model.lazy="msg" >
 ```
 
-#### [`.number`](https://vuejs.bootcss.com/v2/guide/forms.html#number) <a id="number"></a>
+#### [`.number`](https://vuejs.bootcss.com/v2/guide/forms.html#number)  <a id="number"></a>
 
 如果想自动将用户的输入值转为数值类型，可以给 `v-model` 添加 `number` 修饰符：
 
@@ -225,13 +219,11 @@ Vue.config.keyCodes.f1 = 112
 
 这通常很有用，因为即使在 `type="number"` 时，HTML 输入元素的值也总会返回字符串。如果这个值无法被 `parseFloat()` 解析，则会返回原始的值。
 
-#### [`.trim`](https://vuejs.bootcss.com/v2/guide/forms.html#trim) <a id="trim"></a>
+#### [`.trim`](https://vuejs.bootcss.com/v2/guide/forms.html#trim)  <a id="trim"></a>
 
 如果要自动过滤用户输入的首尾空白字符，可以给 `v-model` 添加 `trim` 修饰符：
 
 ```markup
 <input v-model.trim="msg">
 ```
-
-
 

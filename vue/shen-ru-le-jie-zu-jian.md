@@ -1,8 +1,8 @@
 # 深入了解组件
 
-### [组件名](https://vuejs.bootcss.com/v2/guide/components-registration.html#%E7%BB%84%E4%BB%B6%E5%90%8D) <a id="&#x7EC4;&#x4EF6;&#x540D;"></a>
+### [组件名](https://vuejs.bootcss.com/v2/guide/components-registration.html#组件名)  <a id="&#x7EC4;&#x4EF6;&#x540D;"></a>
 
-#### [组件名大小写](https://vuejs.bootcss.com/v2/guide/components-registration.html#%E7%BB%84%E4%BB%B6%E5%90%8D%E5%A4%A7%E5%B0%8F%E5%86%99) <a id="&#x7EC4;&#x4EF6;&#x540D;&#x5927;&#x5C0F;&#x5199;"></a>
+#### [组件名大小写](https://vuejs.bootcss.com/v2/guide/components-registration.html#组件名大小写)  <a id="&#x7EC4;&#x4EF6;&#x540D;&#x5927;&#x5C0F;&#x5199;"></a>
 
 定义组件名的方式有两种：
 
@@ -22,7 +22,7 @@ Vue.component('MyComponentName', { /* ... */ })
 
 当使用 PascalCase \(驼峰式命名\) 定义一个组件时，你在引用这个自定义元素时两种命名法都可以使用。也就是说 `<my-component-name>` 和 `<MyComponentName>` 都是可接受的。注意，尽管如此，直接在 DOM \(即非字符串的模板\) 中使用时只有 kebab-case 是有效的。
 
-### [全局注册](https://vuejs.bootcss.com/v2/guide/components-registration.html#%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C) <a id="&#x5168;&#x5C40;&#x6CE8;&#x518C;"></a>
+### [全局注册](https://vuejs.bootcss.com/v2/guide/components-registration.html#全局注册)  <a id="&#x5168;&#x5C40;&#x6CE8;&#x518C;"></a>
 
 到目前为止，我们只用过 `Vue.component` 来创建组件：
 
@@ -52,7 +52,7 @@ new Vue({ el: '#app' })
 
 在所有子组件中也是如此，也就是说这三个组件_在各自内部_也都可以相互使用。
 
-### [局部注册](https://vuejs.bootcss.com/v2/guide/components-registration.html#%E5%B1%80%E9%83%A8%E6%B3%A8%E5%86%8C) <a id="&#x5C40;&#x90E8;&#x6CE8;&#x518C;"></a>
+### [局部注册](https://vuejs.bootcss.com/v2/guide/components-registration.html#局部注册)  <a id="&#x5C40;&#x90E8;&#x6CE8;&#x518C;"></a>
 
 全局注册往往是不够理想的。比如，如果你使用一个像 webpack 这样的构建系统，全局注册所有的组件意味着即便你已经不再使用一个组件了，它仍然会被包含在你最终的构建结果中。这造成了用户下载的 JavaScript 的无谓的增加。
 
@@ -64,7 +64,7 @@ var ComponentB = { /* ... */ }
 var ComponentC = { /* ... */ }
 ```
 
- 然后在 `components` 选项中定义你想要使用的组件：
+然后在 `components` 选项中定义你想要使用的组件：
 
 ```javascript
 new Vue({
@@ -91,9 +91,9 @@ var ComponentB = {
 }
 ```
 
-#### [基础组件的自动化全局注册](https://vuejs.bootcss.com/v2/guide/components-registration.html#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C) <a id="&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x5168;&#x5C40;&#x6CE8;&#x518C;"></a>
+#### [基础组件的自动化全局注册](https://vuejs.bootcss.com/v2/guide/components-registration.html#基础组件的自动化全局注册)  <a id="&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x5168;&#x5C40;&#x6CE8;&#x518C;"></a>
 
-可能你的许多组件只是包裹了一个输入框或按钮之类的元素，是相对通用的。我们有时候会把它们称为[基础组件](https://vuejs.bootcss.com/v2/style-guide/#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E5%90%8D-%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90)，它们会在各个组件中被频繁的用到。
+可能你的许多组件只是包裹了一个输入框或按钮之类的元素，是相对通用的。我们有时候会把它们称为[基础组件](https://vuejs.bootcss.com/v2/style-guide/#基础组件名-强烈推荐)，它们会在各个组件中被频繁的用到。
 
 所以会导致很多组件里都会有一个包含基础组件的长列表：
 
@@ -162,13 +162,11 @@ requireComponent.keys().forEach(fileName => {
 })
 ```
 
-记住**全局注册的行为必须在根 Vue 实例 \(通过 `new Vue`\) 创建之前发生**。[这里](https://github.com/chrisvfritz/vue-enterprise-boilerplate/blob/master/src/components/_globals.js)有一个真实项目情景下的示例。
-
-
+记住**全局注册的行为必须在根 Vue 实例 \(通过** `new Vue`**\) 创建之前发生**。[这里](https://github.com/chrisvfritz/vue-enterprise-boilerplate/blob/master/src/components/_globals.js)有一个真实项目情景下的示例。
 
 ## Props
 
-### [Prop 的大小写 \(camelCase vs kebab-case\)](https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99-camelCase-vs-kebab-case) <a id="Prop-&#x7684;&#x5927;&#x5C0F;&#x5199;-camelCase-vs-kebab-case"></a>
+### [Prop 的大小写 \(camelCase vs kebab-case\)](https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-的大小写-camelCase-vs-kebab-case)  <a id="Prop-&#x7684;&#x5927;&#x5C0F;&#x5199;-camelCase-vs-kebab-case"></a>
 
 HTML 中的特性名是大小写不敏感的，所以浏览器会把所有大写字符解释为小写字符。这意味着当你使用 DOM 中的模板时，camelCase \(驼峰命名法\) 的 prop 名需要使用其等价的 kebab-case \(短横线分隔命名\) 命名：
 
@@ -185,7 +183,7 @@ Vue.component('blog-post', {
 <blog-post post-title="hello!"></blog-post>
 ```
 
-### [Prop 类型](https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-%E7%B1%BB%E5%9E%8B) <a id="Prop-&#x7C7B;&#x578B;"></a>
+### [Prop 类型](https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-类型)  <a id="Prop-&#x7C7B;&#x578B;"></a>
 
 到这里，我们只看到了以字符串数组形式列出的 prop：
 
@@ -205,9 +203,9 @@ props: {
 }
 ```
 
-这不仅为你的组件提供了文档，还会在它们遇到错误的类型时从浏览器的 JavaScript 控制台提示用户。你会在这个页面接下来的部分看到[类型检查和其它 prop 验证](https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-%E9%AA%8C%E8%AF%81)。
+这不仅为你的组件提供了文档，还会在它们遇到错误的类型时从浏览器的 JavaScript 控制台提示用户。你会在这个页面接下来的部分看到[类型检查和其它 prop 验证](https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-验证)。
 
-### [传递静态或动态 Prop](https://vuejs.bootcss.com/v2/guide/components-props.html#%E4%BC%A0%E9%80%92%E9%9D%99%E6%80%81%E6%88%96%E5%8A%A8%E6%80%81-Prop) <a id="&#x4F20;&#x9012;&#x9759;&#x6001;&#x6216;&#x52A8;&#x6001;-Prop"></a>
+### [传递静态或动态 Prop](https://vuejs.bootcss.com/v2/guide/components-props.html#传递静态或动态-Prop)  <a id="&#x4F20;&#x9012;&#x9759;&#x6001;&#x6216;&#x52A8;&#x6001;-Prop"></a>
 
 像这样，你已经知道了可以像这样给 prop 传入一个静态的值：
 
@@ -227,7 +225,7 @@ props: {
 
 在上述两个示例中，我们传入的值都是字符串类型的，但实际上_任何_类型的值都可以传给一个 prop。
 
-#### [传入一个布尔值](https://vuejs.bootcss.com/v2/guide/components-props.html#%E4%BC%A0%E5%85%A5%E4%B8%80%E4%B8%AA%E5%B8%83%E5%B0%94%E5%80%BC) <a id="&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;"></a>
+#### [传入一个布尔值](https://vuejs.bootcss.com/v2/guide/components-props.html#传入一个布尔值)  <a id="&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;"></a>
 
 ```javascript
 <!-- 包含该 prop 没有值的情况在内，都意味着 `true`。-->
@@ -241,11 +239,11 @@ props: {
 <blog-post v-bind:is-published="post.isPublished"></blog-post>
 ```
 
-### [单向数据流](https://vuejs.bootcss.com/v2/guide/components-props.html#%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81) <a id="&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;"></a>
+### [单向数据流](https://vuejs.bootcss.com/v2/guide/components-props.html#单向数据流)  <a id="&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;"></a>
 
 所有的 prop 都使得其父子 prop 之间形成了一个**单向下行绑定**：父级 prop 的更新会向下流动到子组件中，但是反过来则不行
 
-### [Prop 验证](https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-%E9%AA%8C%E8%AF%81) <a id="Prop-&#x9A8C;&#x8BC1;"></a>
+### [Prop 验证](https://vuejs.bootcss.com/v2/guide/components-props.html#Prop-验证)  <a id="Prop-&#x9A8C;&#x8BC1;"></a>
 
 我们可以为组件的 prop 指定验证要求，例如你知道的这些类型。如果有一个需求没有被满足，则 Vue 会在浏览器控制台中警告你。这在开发一个会被别人用到的组件时尤其有帮助。
 
@@ -287,11 +285,11 @@ Vue.component('my-component', {
 })
 ```
 
- 当 prop 验证失败的时候，\(开发环境构建版本的\) Vue 将会产生一个控制台的警告
+当 prop 验证失败的时候，\(开发环境构建版本的\) Vue 将会产生一个控制台的警告
 
-![](../gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image-8.png)
 
-#### [类型检查](https://vuejs.bootcss.com/v2/guide/components-props.html#%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5) <a id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;"></a>
+#### [类型检查](https://vuejs.bootcss.com/v2/guide/components-props.html#类型检查)  <a id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;"></a>
 
 `type` 可以是下列原生构造函数中的一个：
 
@@ -306,7 +304,7 @@ Vue.component('my-component', {
 
 ## 自定义事件（emit）
 
-### [事件名](https://vuejs.bootcss.com/v2/guide/components-custom-events.html#%E4%BA%8B%E4%BB%B6%E5%90%8D) <a id="&#x4E8B;&#x4EF6;&#x540D;"></a>
+### [事件名](https://vuejs.bootcss.com/v2/guide/components-custom-events.html#事件名)  <a id="&#x4E8B;&#x4EF6;&#x540D;"></a>
 
 不同于组件和 prop，事件名不存在任何自动化的大小写转换。而是触发的事件名需要完全匹配监听这个事件所用的名称。举个例子，如果触发一个 camelCase 名字的事件：
 
@@ -324,7 +322,7 @@ this.$emit('myEvent')
 
 因此，我们推荐你**始终使用 kebab-case 的事件名**。
 
-### [自定义组件的 `v-model`](https://vuejs.bootcss.com/v2/guide/components-custom-events.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84-v-model) <a id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;-v-model"></a>
+### [自定义组件的 `v-model`](https://vuejs.bootcss.com/v2/guide/components-custom-events.html#自定义组件的-v-model)  <a id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;-v-model"></a>
 
 > 2.2.0+ 新增
 
@@ -357,7 +355,7 @@ Vue.component('base-checkbox', {
 
 这里的 `lovingVue` 的值将会传入这个名为 `checked` 的 prop。同时当 `<base-checkbox>` 触发一个 `change` 事件并附带一个新的值的时候，这个 `lovingVue` 的属性将会被更新。
 
-### [`.sync` 修饰符](https://vuejs.bootcss.com/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6) <a id="sync-&#x4FEE;&#x9970;&#x7B26;"></a>
+### [`.sync` 修饰符](https://vuejs.bootcss.com/v2/guide/components-custom-events.html#sync-修饰符)  <a id="sync-&#x4FEE;&#x9970;&#x7B26;"></a>
 
 > 2.3.0+ 新增
 
@@ -384,17 +382,17 @@ this.$emit('update:title', newTitle)
 <text-document v-bind:title.sync="doc.title"></text-document>
 ```
 
-![](../gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image-1.png)
 
- 当我们用一个对象同时设置多个 prop 的时候，也可以将这个 `.sync` 修饰符和 `v-bind` 配合使用：
+当我们用一个对象同时设置多个 prop 的时候，也可以将这个 `.sync` 修饰符和 `v-bind` 配合使用：
 
 ```markup
 <text-document v-bind.sync="doc"></text-document>
 ```
 
- 这样会把 `doc` 对象中的每一个属性 \(如 `title`\) 都作为一个独立的 prop 传进去，然后各自添加用于更新的 `v-on` 监听器。
+这样会把 `doc` 对象中的每一个属性 \(如 `title`\) 都作为一个独立的 prop 传进去，然后各自添加用于更新的 `v-on` 监听器。
 
-![](../gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image-7.png)
 
 ## 插槽
 
@@ -406,13 +404,11 @@ this.$emit('update:title', newTitle)
 
 ## 处理边界情况
 
-### [访问元素 & 组件](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%85%83%E7%B4%A0-amp-%E7%BB%84%E4%BB%B6) <a id="&#x8BBF;&#x95EE;&#x5143;&#x7D20;-amp-&#x7EC4;&#x4EF6;"></a>
+### [访问元素 & 组件](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#访问元素-amp-组件)  <a id="&#x8BBF;&#x95EE;&#x5143;&#x7D20;-amp-&#x7EC4;&#x4EF6;"></a>
 
 在绝大多数情况下，我们最好不要触达另一个组件实例内部或手动操作 DOM 元素。不过也确实在一些情况下做这些事情是合适的。
 
-
-
-#### [访问根实例](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E6%A0%B9%E5%AE%9E%E4%BE%8B) <a id="&#x8BBF;&#x95EE;&#x6839;&#x5B9E;&#x4F8B;"></a>
+#### [访问根实例](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#访问根实例)  <a id="&#x8BBF;&#x95EE;&#x6839;&#x5B9E;&#x4F8B;"></a>
 
 在每个 `new Vue` 实例的子组件中，其根实例可以通过 `$root` 属性进行访问。例如，在这个根实例中：
 
@@ -445,16 +441,15 @@ this.$root.bar
 
 // 调用根组件的方法
 this.$root.baz()
-
 ```
 
-#### [访问父级组件实例](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B) <a id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"></a>
+#### [访问父级组件实例](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#访问父级组件实例)  <a id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"></a>
 
-![](../gitbook/assets/image%20%2814%29.png)
+![](../.gitbook/assets/image-14.png)
 
-![](../gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image-3.png)
 
-[访问子组件实例或子元素](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%AD%90%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E6%88%96%E5%AD%90%E5%85%83%E7%B4%A0)
+[访问子组件实例或子元素](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#访问子组件实例或子元素)
 
 尽管存在 prop 和事件，有的时候你仍可能需要在 JavaScript 里直接访问一个子组件。为了达到这个目的，你可以通过 `ref` 特性为这个子组件赋予一个 ID 引用。例如：
 
@@ -491,12 +486,11 @@ methods: {
 this.$refs.usernameInput.focus()
 ```
 
-当 `ref` 和 `v-for` 一起使用的时候，你得到的引用将会是一个包含了对应数据源的这些子组件的数组。  
+当 `ref` 和 `v-for` 一起使用的时候，你得到的引用将会是一个包含了对应数据源的这些子组件的数组。
 
+![](../.gitbook/assets/image-10.png)
 
-![](../gitbook/assets/image%20%2810%29.png)
-
-### [程序化的事件侦听器](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E7%A8%8B%E5%BA%8F%E5%8C%96%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BE%A6%E5%90%AC%E5%99%A8) <a id="&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;"></a>
+### [程序化的事件侦听器](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#程序化的事件侦听器)  <a id="&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;"></a>
 
 现在，你已经知道了 `$emit` 的用法，它可以被 `v-on` 侦听，但是 Vue 实例同时在其事件接口中提供了其它的方法。我们可以：
 
@@ -506,9 +500,9 @@ this.$refs.usernameInput.focus()
 
 你通常不会用到这些，但是当你需要在一个组件实例上手动侦听事件时，它们是派得上用场的。
 
-![](../gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image-2.png)
 
-#### [通过 `v-once` 创建低开销的静态组件](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#%E9%80%9A%E8%BF%87-v-once-%E5%88%9B%E5%BB%BA%E4%BD%8E%E5%BC%80%E9%94%80%E7%9A%84%E9%9D%99%E6%80%81%E7%BB%84%E4%BB%B6) <a id="&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;"></a>
+#### [通过 `v-once` 创建低开销的静态组件](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#通过-v-once-创建低开销的静态组件)  <a id="&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;"></a>
 
 渲染普通的 HTML 元素在 Vue 中是非常快速的，但有的时候你可能有一个组件，这个组件包含了**大量**静态内容。在这种情况下，你可以在根元素上添加 `v-once` 特性以确保这些内容只计算一次然后缓存起来，就像这样：
 
@@ -523,5 +517,5 @@ Vue.component('terms-of-service', {
 })
 ```
 
-![](../gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image-5.png)
 
