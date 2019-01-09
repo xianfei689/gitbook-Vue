@@ -29,11 +29,11 @@ Mustache 标签将会被替代为对应数据对象上 `msg` 属性的值。无�
 <p>Using v-html directive: <span v-html="rawHtml"></span></p>
 ```
 
-![](../.gitbook/assets/image-12.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/3.0.png)
 
 这个 `span` 的内容将会被替换成为属性值 `rawHtml`，直接作为 HTML——会忽略解析属性值中的数据绑定。注意，你不能使用 `v-html` 来复合局部模板，因为 Vue 不是基于字符串的模板引擎。反之，对于用户界面 \(UI\)，组件更适合作为可重用和可组合的基本单位。
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/3.1.png)
 
 #### [特性](https://vuejs.bootcss.com/v2/guide/syntax.html#特性)  <a id="&#x7279;&#x6027;"></a>
 
@@ -126,7 +126,7 @@ Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 [
 <div v-on:click.self="doThat">...</div>
 ```
 
-![](../.gitbook/assets/image-6.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/3.2.png)
 
 2.1.4 新增
 
@@ -148,7 +148,7 @@ Vue 还对应 [`addEventListener` 中的 `passive` 选项](https://developer.moz
 
 这个 `.passive` 修饰符尤其能够提升移动端的性能。
 
-![](../.gitbook/assets/image-16.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/3.3.png)
 
 ### [按键修饰符](https://vuejs.bootcss.com/v2/guide/events.html#按键修饰符)  <a id="&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"></a>
 
@@ -194,9 +194,9 @@ Vue.config.keyCodes.f1 = 112
 
 你可以用 `v-model` 指令在表单 `<input>`、`<textarea>` 及 `<select>` 元素上创建双向数据绑定。它会根据控件类型自动选取正确的方法来更新元素。尽管有些神奇，但 `v-model` 本质上不过是语法糖。它负责监听用户的输入事件以更新数据，并对一些极端场景进行一些特殊处理。
 
-![](../.gitbook/assets/image-4.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/3.4.png)
 
-![](../.gitbook/assets/image-18.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/3.5.png)
 
 ### [修饰符](https://vuejs.bootcss.com/v2/guide/forms.html#修饰符)  <a id="&#x4FEE;&#x9970;&#x7B26;"></a>
 

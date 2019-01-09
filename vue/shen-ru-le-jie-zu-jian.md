@@ -287,7 +287,7 @@ Vue.component('my-component', {
 
 当 prop 验证失败的时候，\(开发环境构建版本的\) Vue 将会产生一个控制台的警告
 
-![](../.gitbook/assets/image-8.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/4.0.png)
 
 #### [类型检查](https://vuejs.bootcss.com/v2/guide/components-props.html#类型检查)  <a id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;"></a>
 
@@ -382,7 +382,7 @@ this.$emit('update:title', newTitle)
 <text-document v-bind:title.sync="doc.title"></text-document>
 ```
 
-![](../.gitbook/assets/image-1.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/4.1.png)
 
 当我们用一个对象同时设置多个 prop 的时候，也可以将这个 `.sync` 修饰符和 `v-bind` 配合使用：
 
@@ -392,7 +392,7 @@ this.$emit('update:title', newTitle)
 
 这样会把 `doc` 对象中的每一个属性 \(如 `title`\) 都作为一个独立的 prop 传进去，然后各自添加用于更新的 `v-on` 监听器。
 
-![](../.gitbook/assets/image-7.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/4.2.png)
 
 ## 插槽
 
@@ -445,9 +445,9 @@ this.$root.baz()
 
 #### [访问父级组件实例](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#访问父级组件实例)  <a id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"></a>
 
-![](../.gitbook/assets/image-14.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/4.3.png)
 
-![](../.gitbook/assets/image-3.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/4.4.png)
 
 [访问子组件实例或子元素](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#访问子组件实例或子元素)
 
@@ -488,7 +488,7 @@ this.$refs.usernameInput.focus()
 
 当 `ref` 和 `v-for` 一起使用的时候，你得到的引用将会是一个包含了对应数据源的这些子组件的数组。
 
-![](../.gitbook/assets/image-10.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/4.5.png)
 
 ### [程序化的事件侦听器](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#程序化的事件侦听器)  <a id="&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;"></a>
 
@@ -500,7 +500,7 @@ this.$refs.usernameInput.focus()
 
 你通常不会用到这些，但是当你需要在一个组件实例上手动侦听事件时，它们是派得上用场的。
 
-![](../.gitbook/assets/image-2.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/4.6.png)
 
 #### [通过 `v-once` 创建低开销的静态组件](https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#通过-v-once-创建低开销的静态组件)  <a id="&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;"></a>
 
@@ -517,5 +517,5 @@ Vue.component('terms-of-service', {
 })
 ```
 
-![](../.gitbook/assets/image-5.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/4.7.png)
 

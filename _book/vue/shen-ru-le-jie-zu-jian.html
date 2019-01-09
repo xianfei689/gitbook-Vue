@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>深入了解组件 · GitBook</title>
+        <title>4.深入了解组件 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
                 <a href="../">
             
                     
-                    Vue.js
+                    1.Vue.js
             
                 </a>
             
@@ -114,7 +114,7 @@
                 <a href="sheng-ming-zhou-qi.html">
             
                     
-                    生命周期
+                    2.生命周期
             
                 </a>
             
@@ -127,7 +127,7 @@
                 <a href="untitled.html">
             
                     
-                    语法
+                    3.语法
             
                 </a>
             
@@ -140,7 +140,7 @@
                 <a href="shen-ru-le-jie-zu-jian.html">
             
                     
-                    深入了解组件
+                    4.深入了解组件
             
                 </a>
             
@@ -153,7 +153,7 @@
                 <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html">
             
                     
-                    深入响应式原理{双向绑定}
+                    5.深入响应式原理{双向绑定}
             
                 </a>
             
@@ -166,7 +166,7 @@
                 <a href="vue30-wo-de-fen-xi.html">
             
                     
-                    Vue3.0 我的分析
+                    6.Vue3.0 我的分析
             
                 </a>
             
@@ -179,7 +179,7 @@
                 <a href="vuex/">
             
                     
-                    VueX
+                    7.VueX
             
                 </a>
             
@@ -288,7 +288,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >深入了解组件</a>
+        <a href=".." >4.深入了解组件</a>
     </h1>
 </div>
 
@@ -512,7 +512,7 @@ requireComponent.keys().forEach(fileName =&gt; {
 })
 </code></pre>
 <p>&#x5F53; prop &#x9A8C;&#x8BC1;&#x5931;&#x8D25;&#x7684;&#x65F6;&#x5019;&#xFF0C;(&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x6784;&#x5EFA;&#x7248;&#x672C;&#x7684;) Vue &#x5C06;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x8B66;&#x544A;</p>
-<p><img src="../.gitbook/assets/image-8.png" alt=""></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/4.0.png" alt=""></p>
 <h4 id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;--"><a href="https://vuejs.bootcss.com/v2/guide/components-props.html#&#x7C7B;&#x578B;&#x68C0;&#x67E5;" target="_blank">&#x7C7B;&#x578B;&#x68C0;&#x67E5;</a>  <a id="&#x7C7B;&#x578B;&#x68C0;&#x67E5;"></a></h4>
 <p><code>type</code> &#x53EF;&#x4EE5;&#x662F;&#x4E0B;&#x5217;&#x539F;&#x751F;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#xFF1A;</p>
 <ul>
@@ -578,12 +578,12 @@ requireComponent.keys().forEach(fileName =&gt; {
 <p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8D77;&#x89C1;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x7F29;&#x5199;&#xFF0C;&#x5373; <code>.sync</code> &#x4FEE;&#x9970;&#x7B26;&#xFF1A;</p>
 <pre><code class="lang-markup">&lt;text-document v-bind:title.sync=&quot;doc.title&quot;&gt;&lt;/text-document&gt;
 </code></pre>
-<p><img src="../.gitbook/assets/image-1.png" alt=""></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/4.1.png" alt=""></p>
 <p>&#x5F53;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A; prop &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A; <code>.sync</code> &#x4FEE;&#x9970;&#x7B26;&#x548C; <code>v-bind</code> &#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF1A;</p>
 <pre><code class="lang-markup">&lt;text-document v-bind.sync=&quot;doc&quot;&gt;&lt;/text-document&gt;
 </code></pre>
 <p>&#x8FD9;&#x6837;&#x4F1A;&#x628A; <code>doc</code> &#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5C5E;&#x6027; (&#x5982; <code>title</code>) &#x90FD;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684; prop &#x4F20;&#x8FDB;&#x53BB;&#xFF0C;&#x7136;&#x540E;&#x5404;&#x81EA;&#x6DFB;&#x52A0;&#x7528;&#x4E8E;&#x66F4;&#x65B0;&#x7684; <code>v-on</code> &#x76D1;&#x542C;&#x5668;&#x3002;</p>
-<p><img src="../.gitbook/assets/image-7.png" alt=""></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/4.2.png" alt=""></p>
 <h2 id="&#x63D2;&#x69FD;">&#x63D2;&#x69FD;</h2>
 <p>#############################</p>
 <h2 id="&#x52A8;&#x6001;&#x7EC4;&#x4EF6;&#x548C;&#x5F02;&#x6B65;&#x7EC4;&#x4EF6;">&#x52A8;&#x6001;&#x7EC4;&#x4EF6;&#x548C;&#x5F02;&#x6B65;&#x7EC4;&#x4EF6;</h2>
@@ -620,8 +620,8 @@ requireComponent.keys().forEach(fileName =&gt; {
 <span class="hljs-keyword">this</span>.$root.baz()
 </code></pre>
 <h4 id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;--"><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;" target="_blank">&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;</a>  <a id="&#x8BBF;&#x95EE;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"></a></h4>
-<p><img src="../.gitbook/assets/image-14.png" alt=""></p>
-<p><img src="../.gitbook/assets/image-3.png" alt=""></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/4.3.png" alt=""></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/4.4.png" alt=""></p>
 <p><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#&#x8BBF;&#x95EE;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x6216;&#x5B50;&#x5143;&#x7D20;" target="_blank">&#x8BBF;&#x95EE;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x6216;&#x5B50;&#x5143;&#x7D20;</a></p>
 <p>&#x5C3D;&#x7BA1;&#x5B58;&#x5728; prop &#x548C;&#x4E8B;&#x4EF6;&#xFF0C;&#x6709;&#x7684;&#x65F6;&#x5019;&#x4F60;&#x4ECD;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5728; JavaScript &#x91CC;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>ref</code> &#x7279;&#x6027;&#x4E3A;&#x8FD9;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A; ID &#x5F15;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
 <pre><code class="lang-javascript">&lt;base-input ref=<span class="hljs-string">&quot;usernameInput&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">base-input</span>&gt;</span>
@@ -644,7 +644,7 @@ requireComponent.keys().forEach(fileName =&gt; {
 <pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.$refs.usernameInput.focus()
 </code></pre>
 <p>&#x5F53; <code>ref</code> &#x548C; <code>v-for</code> &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x5F97;&#x5230;&#x7684;&#x5F15;&#x7528;&#x5C06;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8FD9;&#x4E9B;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x3002;</p>
-<p><img src="../.gitbook/assets/image-10.png" alt=""></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/4.5.png" alt=""></p>
 <h3 id="&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;--"><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;" target="_blank">&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;</a>  <a id="&#x7A0B;&#x5E8F;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;"></a></h3>
 <p>&#x73B0;&#x5728;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86; <code>$emit</code> &#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x88AB; <code>v-on</code> &#x4FA6;&#x542C;&#xFF0C;&#x4F46;&#x662F; Vue &#x5B9E;&#x4F8B;&#x540C;&#x65F6;&#x5728;&#x5176;&#x4E8B;&#x4EF6;&#x63A5;&#x53E3;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x5176;&#x5B83;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#xFF1A;</p>
 <ul>
@@ -653,7 +653,7 @@ requireComponent.keys().forEach(fileName =&gt; {
 <li>&#x901A;&#x8FC7; <code>$off(eventName, eventHandler)</code> &#x505C;&#x6B62;&#x4FA6;&#x542C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;</li>
 </ul>
 <p>&#x4F60;&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#x8FD9;&#x4E9B;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x4E0A;&#x624B;&#x52A8;&#x4FA6;&#x542C;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x6D3E;&#x5F97;&#x4E0A;&#x7528;&#x573A;&#x7684;&#x3002;</p>
-<p><img src="../.gitbook/assets/image-2.png" alt=""></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/4.6.png" alt=""></p>
 <h4 id="&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;--"><a href="https://vuejs.bootcss.com/v2/guide/components-edge-cases.html#&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;" target="_blank">&#x901A;&#x8FC7; <code>v-once</code> &#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;</a>  <a id="&#x901A;&#x8FC7;-v-once-&#x521B;&#x5EFA;&#x4F4E;&#x5F00;&#x9500;&#x7684;&#x9759;&#x6001;&#x7EC4;&#x4EF6;"></a></h4>
 <p>&#x6E32;&#x67D3;&#x666E;&#x901A;&#x7684; HTML &#x5143;&#x7D20;&#x5728; Vue &#x4E2D;&#x662F;&#x975E;&#x5E38;&#x5FEB;&#x901F;&#x7684;&#xFF0C;&#x4F46;&#x6709;&#x7684;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5305;&#x542B;&#x4E86;<strong>&#x5927;&#x91CF;</strong>&#x9759;&#x6001;&#x5185;&#x5BB9;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6839;&#x5143;&#x7D20;&#x4E0A;&#x6DFB;&#x52A0; <code>v-once</code> &#x7279;&#x6027;&#x4EE5;&#x786E;&#x4FDD;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x53EA;&#x8BA1;&#x7B97;&#x4E00;&#x6B21;&#x7136;&#x540E;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x5C31;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
 <pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;terms-of-service&apos;</span>, {
@@ -665,7 +665,7 @@ requireComponent.keys().forEach(fileName =&gt; {
   `</span>
 })
 </code></pre>
-<p><img src="../.gitbook/assets/image-5.png" alt=""></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/4.7.png" alt=""></p>
 
                                 
                                 </section>
@@ -693,12 +693,12 @@ requireComponent.keys().forEach(fileName =&gt; {
 
             
                 
-                <a href="untitled.html" class="navigation navigation-prev " aria-label="Previous page: 语法">
+                <a href="untitled.html" class="navigation navigation-prev " aria-label="Previous page: 3.语法">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html" class="navigation navigation-next " aria-label="Next page: 深入响应式原理{双向绑定}">
+                <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html" class="navigation navigation-next " aria-label="Next page: 5.深入响应式原理{双向绑定}">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -709,7 +709,7 @@ requireComponent.keys().forEach(fileName =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"深入了解组件","level":"2.3","depth":1,"next":{"title":"深入响应式原理{双向绑定}","level":"2.4","depth":1,"path":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","ref":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","articles":[]},"previous":{"title":"语法","level":"2.2","depth":1,"path":"vue/untitled.md","ref":"vue/untitled.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/shen-ru-le-jie-zu-jian.md","mtime":"2019-01-07T14:01:27.948Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T14:01:42.443Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.深入了解组件","level":"2.3","depth":1,"next":{"title":"5.深入响应式原理{双向绑定}","level":"2.4","depth":1,"path":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","ref":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","articles":[]},"previous":{"title":"3.语法","level":"2.2","depth":1,"path":"vue/untitled.md","ref":"vue/untitled.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/shen-ru-le-jie-zu-jian.md","mtime":"2019-01-09T12:33:51.966Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T13:59:05.040Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

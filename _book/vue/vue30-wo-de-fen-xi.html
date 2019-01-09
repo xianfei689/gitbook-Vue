@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Vue3.0 我的分析 · GitBook</title>
+        <title>6.Vue3.0 我的分析 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -94,7 +94,7 @@
                 <a href="../">
             
                     
-                    Vue.js
+                    1.Vue.js
             
                 </a>
             
@@ -114,7 +114,7 @@
                 <a href="sheng-ming-zhou-qi.html">
             
                     
-                    生命周期
+                    2.生命周期
             
                 </a>
             
@@ -127,7 +127,7 @@
                 <a href="untitled.html">
             
                     
-                    语法
+                    3.语法
             
                 </a>
             
@@ -140,7 +140,7 @@
                 <a href="shen-ru-le-jie-zu-jian.html">
             
                     
-                    深入了解组件
+                    4.深入了解组件
             
                 </a>
             
@@ -153,7 +153,7 @@
                 <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html">
             
                     
-                    深入响应式原理{双向绑定}
+                    5.深入响应式原理{双向绑定}
             
                 </a>
             
@@ -166,7 +166,7 @@
                 <a href="vue30-wo-de-fen-xi.html">
             
                     
-                    Vue3.0 我的分析
+                    6.Vue3.0 我的分析
             
                 </a>
             
@@ -179,7 +179,7 @@
                 <a href="vuex/">
             
                     
-                    VueX
+                    7.VueX
             
                 </a>
             
@@ -288,7 +288,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Vue3.0 我的分析</a>
+        <a href=".." >6.Vue3.0 我的分析</a>
     </h1>
 </div>
 
@@ -324,7 +324,7 @@
 <li>(Component fast path&#xFF09;&#x7F16;&#x8BD1;&#x65F6;&#x5224;&#x65AD;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#xFF08;&#x662F;&#x5426;&#x662F;&#x539F;&#x751F;&#x5143;&#x7D20;or&#x7EC4;&#x4EF6;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x539F;&#x751F;&#x5143;&#x7D20;&#x7684;&#x8BDD;&#x76F4;&#x63A5;&#x751F;&#x6210;&#x5143;&#x7D20;&#x5143;&#x7D20;&#x5BF9;&#x5E94;&#x7684;Vitrual DOM&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7EC4;&#x4EF6;&#x90A3;&#x4E48;&#x751F;&#x6210;&#x7EC4;&#x4EF6;&#x4EE3;&#x7801;</li>
 <li>(Monomorphic calls)&#x751F;&#x6210;&#x865A;&#x62DF;Node&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x8981;&#x7ADF;&#x53EF;&#x80FD;&#x7684;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x540C;&#x6837;&#x4E2A;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5229;&#x4E8E;JS&#x5F15;&#x64CE;&#x7684;&#x4F18;&#x5316;</li>
 <li><p>&#xFF08;Children type detection&#xFF09;&#x8FD0;&#x884C;&#x65F6;&#x7559;&#x4E0B;Hint&#xFF0C;&#x9759;&#x6001;&#x5206;&#x6790;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x4EE5;&#x4FBF;&#x8DF3;&#x8FC7;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x5224;&#x65AD;</p>
-<p><img src="../.gitbook/assets/15466964219026.jpg" alt="-w1369"></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.0.jpg" alt=""></p>
 </li>
 </ul>
 </li>
@@ -332,31 +332,31 @@
 <ul>
 <li>&#x62C6;&#x5206;&#x7236;&#x7EC4;&#x4EF6;&#x548C;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x8026;&#x5408;&#x5173;&#x7CFB;&#xFF0C;&#x5F15;&#x5165;&#x751F;&#x6210;&#x51FD;&#x6570;&#xFF0C;scope&#x3001;slot&#x7EDF;&#x4E00;&#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x7531;&#x5B50;&#x7EC4;&#x4EF6;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x628A;&#x4F20;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x5206;&#x914D;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#x6765;&#x5B8C;&#x6210;&#x6536;&#x96C6;&#xFF0C;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#xFF1B;</li>
 <li><p>&#x771F;&#x6B63;&#x4F9D;&#x8D56;&#x6478;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x624D;&#x4F1A;&#x53EF;&#x80FD;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x5C31;&#x4E0D;&#x5B58;&#x5728;&#x53BB;&#x624B;&#x52A8;&#x4F18;&#x5316;&#x7EC4;&#x4EF6;&#x8FC7;&#x5EA6;&#x91CD;&#x7ED8;&#x7684;&#x95EE;&#x9898;</p>
-<p><img src="../.gitbook/assets/15467749626441.jpg" alt="-w1298"></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.1.jpg" alt=""></p>
 </li>
 </ul>
 </li>
 <li><p><strong>&#x9759;&#x6001;&#x5185;&#x5BB9;&#x63D0;&#x53D6;</strong></p>
 <ul>
 <li><p>&#x68C0;&#x67E5;&#x5230;&#x4E00;&#x90E8;&#x5206;&#x6A21;&#x677F;&#x4E0D;&#x4F1A;&#x53D8;&#xFF0C;&#x76F4;&#x63A5;&#x63D0;&#x53D6;&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x66F4;&#x65B0;&#x4E2D;&#xFF0C;&#x76F4;&#x63A5;&#x590D;&#x7528;&#x4E4B;&#x524D;&#x7684;Vitrual DOM&#xFF0C;&#x751A;&#x81F3;&#x6BD4;&#x5BF9;&#x8FC7;&#x7A0B;&#x8DF3;&#x8FC7;&#x6574;&#x4E2A;&#x6811; </p>
-<p><img src="../.gitbook/assets/15467749912434.jpg" alt="-w1165"></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.2.jpg" alt=""></p>
 </li>
 <li><p>&#x5982;&#x679C;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x7684;&#x90FD;&#x662F;&#x9759;&#x6001;&#x7684;&#xFF0C;&#x63D0;&#x53D6;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x6BD4;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;data&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x6BD4;&#x5BF9;&#xFF0C;&#x53EA;&#x8981;&#x6BD4;&#x5BF9;&#x5B83;&#x7684;children&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1B;</p>
-<p><img src="../.gitbook/assets/15467750422474.jpg" alt="-w1268"></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.3.jpg" alt=""></p>
 </li>
 </ul>
 </li>
 <li><p><strong>&#x5185;&#x8054;&#x4E8B;&#x4EF6;&#x51FD;&#x6570;&#x63D0;&#x53D6;</strong> <code>&lt;Com @event=&quot;count++&quot;/&gt;</code></p>
 <ul>
 <li><p>&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x751F;&#x6210;&#x65B0;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F1A;&#x5BF9;&#x5185;&#x8054;&#x4E8B;&#x4EF6;&#x7F13;&#x5B58;&#xFF08;Cache&#xFF09;&#xFF0C;&#x65B9;&#x4FBF;&#x91CD;&#x7528;&#xFF0C;&#x907F;&#x514D;&#x5B50;&#x7EC4;&#x4EF6;&#x65E0;&#x754F;&#x66F4;&#x65B0;&#x7684;&#x6548;&#x679C;</p>
-<p><img src="../.gitbook/assets/15467750993057.jpg" alt="-w1302"></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.4.jpg" alt=""></p>
 </li>
 </ul>
 </li>
 <li><p><strong>&#x6027;&#x80FD;&#x538B;&#x6D4B;</strong></p>
 <ul>
 <li><p>&#x5B9E;&#x6D4B;&#xFF0C;<strong>&#x5185;&#x5B58;&#x51CF;&#x534A;&#xFF0C;&#x901F;&#x5EA6;&#x52A0;&#x500D;</strong></p>
-<p><img src="../.gitbook/assets/15467842062672.jpg" alt="-w681"></p>
+<p> <img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.5.jpg" alt=""></p>
 </li>
 </ul>
 </li>
@@ -373,7 +373,7 @@
 </ul>
 <h2 id="&#x66F4;&#x6613;&#x4E8E;&#x7EF4;&#x62A4;">&#x66F4;<strong>&#x6613;&#x4E8E;&#x7EF4;&#x62A4;</strong></h2>
 <ul>
-<li><strong>Flow&#xFF08;facebook&#xFF09;-&gt;TypeScript&#xFF08;Microsoft&#xFF09; &#x91CD;&#x5199;</strong>&#xFF0C;&#x5185;&#x90E8;&#x7684;&#x6A21;&#x5757;&#x89E3;&#x8026;&#xFF0C;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x66F4;&#x597D;&#x7684;&#x7406;&#x89E3;&#x6E90;&#x7801; <img src="../.gitbook/assets/15467800167462.jpg" alt="-w557"></li>
+<li><strong>Flow&#xFF08;facebook&#xFF09;-&gt;TypeScript&#xFF08;Microsoft&#xFF09; &#x91CD;&#x5199;</strong>&#xFF0C;&#x5185;&#x90E8;&#x7684;&#x6A21;&#x5757;&#x89E3;&#x8026;&#xFF0C;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x66F4;&#x597D;&#x7684;&#x7406;&#x89E3;&#x6E90;&#x7801; ! <img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.6.jpg" alt=""></li>
 <li><strong>&#x7F16;&#x8BD1;&#x5668;&#x91CD;&#x5199;</strong><ul>
 <li>&#x63D2;&#x4EF6;&#x5316;&#x8BBE;&#x8BA1;</li>
 <li>&#x5E26;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x7684;parser&#xFF08;source maps)</li>
@@ -392,7 +392,7 @@
 <li><p>vue&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x65F6;&#x53BB;&#x652F;&#x6301;&#x7F16;&#x8BD1;&#x5230;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x591A;&#x7AEF;&#xFF0C;&#x53EF;&#x4EE5;Learn once,run anywhere</p>
 <ul>
 <li><p>&#x5F15;&#x5165;Custom Render API&#xFF0C;&#x5728; import {createRenderer} from &apos;@vue/runtime-core&apos;&#xFF0C;&#x5E73;&#x53F0;&#x65E0;&#x5173;vue runtime</p>
-<p><img src="../.gitbook/assets/15467812232804.jpg" alt="-w1266"></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.7.jpg" alt=""></p>
 </li>
 </ul>
 </li>
@@ -402,11 +402,11 @@
 <li><p><strong>&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x76D1;&#x542C;API</strong></p>
 <ul>
 <li><p>&#x8F7B;&#x677E;&#x5B9E;&#x73B0;&#x57AE;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x5171;&#x4EAB;</p>
-<p><img src="../.gitbook/assets/15467815920125.jpg" alt="-w1088"></p>
+<p><img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.8.jpg" alt=""></p>
 </li>
 </ul>
 </li>
-<li>&#x6392;&#x67E5;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x7684;&#x89E6;&#x53D1;&#x539F;&#x56E0;&#xFF08;&#x63D0;&#x4F9B;&#x65B0;&#x7684; renderTriggered API&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;debugger&#x7A76;&#x7ADF;&#x54EA;&#x4E00;&#x884C;&#x89E6;&#x53D1;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0; <img src="../.gitbook/assets/15467817113261.jpg" alt="-w1218"></li>
+<li>&#x6392;&#x67E5;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x7684;&#x89E6;&#x53D1;&#x539F;&#x56E0;&#xFF08;&#x63D0;&#x4F9B;&#x65B0;&#x7684; renderTriggered API&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;debugger&#x7A76;&#x7ADF;&#x54EA;&#x4E00;&#x884C;&#x89E6;&#x53D1;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0; <img src="http://zhouxianfei.gitee.io/imgstore/front/vue/6.9.jpg" alt=""></li>
 <li>&#x66F4;&#x597D;&#x7684;typeScript &#x652F;&#x6301;&#x4EE5;&#x53CA;&#x539F;&#x751F;&#x7684;Class API &#x548C; TSX</li>
 <li>&#x66F4;&#x597D;&#x7684;&#x8B66;&#x544A;&#x4FE1;&#x606F;<ul>
 <li>&#x7EC4;&#x4EF6;&#x5806;&#x6808;&#x5305;&#x542B;&#x51FD;&#x6570;&#x5F0F;&#x7EC4;&#x4EF6;</li>
@@ -448,12 +448,12 @@
 
             
                 
-                <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html" class="navigation navigation-prev " aria-label="Previous page: 深入响应式原理{双向绑定}">
+                <a href="shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.html" class="navigation navigation-prev " aria-label="Previous page: 5.深入响应式原理{双向绑定}">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="vuex/" class="navigation navigation-next " aria-label="Next page: VueX">
+                <a href="vuex/" class="navigation navigation-next " aria-label="Next page: 7.VueX">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -464,7 +464,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vue3.0 我的分析","level":"2.5","depth":1,"next":{"title":"VueX","level":"2.6","depth":1,"path":"vue/vuex/README.md","ref":"vue/vuex/README.md","articles":[{"title":"Getter","level":"2.6.1","depth":2,"path":"vue/vuex/getter.md","ref":"vue/vuex/getter.md","articles":[]},{"title":"Module","level":"2.6.2","depth":2,"path":"vue/vuex/module.md","ref":"vue/vuex/module.md","articles":[]},{"title":"Action","level":"2.6.3","depth":2,"path":"vue/vuex/action.md","ref":"vue/vuex/action.md","articles":[]},{"title":"Mutation","level":"2.6.4","depth":2,"path":"vue/vuex/mutation.md","ref":"vue/vuex/mutation.md","articles":[]},{"title":"State","level":"2.6.5","depth":2,"path":"vue/vuex/state.md","ref":"vue/vuex/state.md","articles":[]}]},"previous":{"title":"深入响应式原理{双向绑定}","level":"2.4","depth":1,"path":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","ref":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vue30-wo-de-fen-xi.md","mtime":"2019-01-07T14:01:27.952Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T14:01:42.443Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.Vue3.0 我的分析","level":"2.5","depth":1,"next":{"title":"7.VueX","level":"2.6","depth":1,"path":"vue/vuex/README.md","ref":"vue/vuex/README.md","articles":[{"title":"Getter","level":"2.6.1","depth":2,"path":"vue/vuex/getter.md","ref":"vue/vuex/getter.md","articles":[]},{"title":"Module","level":"2.6.2","depth":2,"path":"vue/vuex/module.md","ref":"vue/vuex/module.md","articles":[]},{"title":"Action","level":"2.6.3","depth":2,"path":"vue/vuex/action.md","ref":"vue/vuex/action.md","articles":[]},{"title":"Mutation","level":"2.6.4","depth":2,"path":"vue/vuex/mutation.md","ref":"vue/vuex/mutation.md","articles":[]},{"title":"State","level":"2.6.5","depth":2,"path":"vue/vuex/state.md","ref":"vue/vuex/state.md","articles":[]}]},"previous":{"title":"5.深入响应式原理{双向绑定}","level":"2.4","depth":1,"path":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","ref":"vue/shen-ru-xiang-ying-shi-yuan-li-shuang-xiang-bang-ding.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vue30-wo-de-fen-xi.md","mtime":"2019-01-09T12:42:23.641Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T13:59:05.040Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

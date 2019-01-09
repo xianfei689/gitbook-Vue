@@ -2,7 +2,7 @@
 
 ## 特点：
 
-![](.gitbook/assets/image-13.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/vue/1.0.png)
 
 ## 介绍：
 
@@ -35,7 +35,7 @@ Hello Vue!
 
 组件系统是 Vue 的另一个重要概念，因为它是一种抽象，允许我们使用小型、独立和通常可复用的组件构建大型应用。仔细想想，几乎任意类型的应用界面都可以抽象为一个组件树：
 
-![Component Tree](https://vuejs.bootcss.com/images/components.png)
+![Component Tree](http://zhouxianfei.gitee.io/imgstore/front/vue/1.1.png)
 
 在 Vue 里，一个组件本质上是一个拥有预定义选项的一个 Vue 实例。在 Vue 中注册组件很简单：
 

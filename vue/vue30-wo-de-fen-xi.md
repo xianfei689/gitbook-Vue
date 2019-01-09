@@ -17,28 +17,28 @@
   * \(Monomorphic calls\)生成虚拟Node的时候，函数调用要竟可能的保持一致，同样个数的参数，利于JS引擎的优化
   * （Children type detection）运行时留下Hint，静态分析子元素的类型，以便跳过不必要的判断
 
-    ![-w1369](../.gitbook/assets/15466964219026.jpg)
+    ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.0.jpg)
 * **优化Slots生成**
   * 拆分父组件和子组件的耦合关系，引入生成函数，scope、slot统一为一个函数，由子组件决定是否调用函数，并把传入的内容分配给子组件来完成收集，避免不必要的组件渲染；
   * 真正依赖摸个数据的组件，才会可能重新渲染，就不存在去手动优化组件过度重绘的问题
 
-    ![-w1298](../.gitbook/assets/15467749626441.jpg)
+   ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.1.jpg)
 * **静态内容提取**
   * 检查到一部分模板不会变，直接提取，在之后更新中，直接复用之前的Vitrual DOM，甚至比对过程跳过整个树 
 
-    ![-w1165](../.gitbook/assets/15467749912434.jpg)
+    ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.2.jpg)
 
   * 如果元素的所有属性的都是静态的，提取属性对象，对比元素时，发现data都一样，便可以跳过元素本身比对，只要比对它的children就可以了；
 
-    ![-w1268](../.gitbook/assets/15467750422474.jpg)
+    ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.3.jpg)
 * **内联事件函数提取** `<Com @event="count++"/>`
   * 重新渲染生成新的函数，会对内联事件缓存（Cache），方便重用，避免子组件无畏更新的效果
 
-    ![-w1302](../.gitbook/assets/15467750993057.jpg)
+    ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.4.jpg)
 * **性能压测**
   * 实测，**内存减半，速度加倍**
 
-    ![-w681](../.gitbook/assets/15467842062672.jpg)
+     ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.5.jpg)
 
 ## 更**小**
 
@@ -50,7 +50,7 @@
 
 ## 更**易于维护**
 
-* **Flow（facebook）-&gt;TypeScript（Microsoft） 重写**，内部的模块解耦，类型信息可以帮助更好的理解源码 ![-w557](../.gitbook/assets/15467800167462.jpg)
+* **Flow（facebook）-&gt;TypeScript（Microsoft） 重写**，内部的模块解耦，类型信息可以帮助更好的理解源码 ! ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.6.jpg)
 * **编译器重写**
   * 插件化设计
   * 带位置信息的parser（source maps\)
@@ -65,15 +65,15 @@
 * vue作为一个运行时去支持编译到尽可能多的多端，可以Learn once,run anywhere
   * 引入Custom Render API，在 import {createRenderer} from '@vue/runtime-core'，平台无关vue runtime
 
-    ![-w1266](../.gitbook/assets/15467812232804.jpg)
+   ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.7.jpg)
 
 ## 新功能（新的API）
 
 * **响应式数据监听API**
   * 轻松实现垮组件的状态共享
 
-    ![-w1088](../.gitbook/assets/15467815920125.jpg)
-* 排查组件更新的触发原因（提供新的 renderTriggered API），可以在浏览器debugger究竟哪一行触发组件更新 ![-w1218](../.gitbook/assets/15467817113261.jpg)
+    ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.8.jpg)
+* 排查组件更新的触发原因（提供新的 renderTriggered API），可以在浏览器debugger究竟哪一行触发组件更新 ![](http://zhouxianfei.gitee.io/imgstore/front/vue/6.9.jpg)
 * 更好的typeScript 支持以及原生的Class API 和 TSX
 * 更好的警告信息
   * 组件堆栈包含函数式组件
